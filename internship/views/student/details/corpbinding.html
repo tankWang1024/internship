@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>企业绑定</title>
+    <link rel="stylesheet" href="/public/pages/student/details/corpbinding.css">
+    <link rel="stylesheet" href="/public/css/reset.css">
+    <script src="/public/js/jquery.js"></script>
+    <script src="/public/js/vue.js"></script>
+    <script src="/public/js/config.js"></script>
+    <script src="/public/js/utils.js"></script>
+    <script src="/public/js/layer/layer.js"></script>
+    
+</head>
+<body >
+    <div class="wrap" id="app">
+        <div class="wrap-block">
+            <div class="wrap-title">
+                企业绑定
+            </div>
+        </div>
+        <div class="content">
+            <div class="input-line">
+                <span class="title required">企业名称</span>
+                <input type="text" class="corp-input" v-model="form.corpName">
+            </div>
+            
+            <div class="input-line">
+                <span class="title">类型</span>
+                <input type="text" class="corp-input" placeholder="如：有限责任公司" v-model="form.type">
+            </div>
+
+            <div class="input-line">
+                <span class="title required">法人</span>
+                <input type="text" class="corp-input" v-model="form.legalPerson">
+            </div>
+
+            <div class="input-line">
+                <span class="title">注册资本</span>
+                <input type="text" class="corp-input" v-model="form.registerCapita">
+            </div>
+
+            <div class="input-line">
+                <span class="title">企业注册号</span>
+                <input type="text" class="corp-input" v-model="form.regCode">
+                <span style="display:block;color: darkred;">若企业含有注册号，则必填</span>
+            </div>
+
+            <div class="input-line">
+                <span class="title">创建日期</span>
+                <input type="text" class="corp-input" v-model="form.createDate">
+            </div>
+
+            <div class="input-line">
+                <span class="title">开始营业日期</span>
+                <input type="text" class="corp-input" v-model="form.startBusiness">
+            </div>
+
+            <div class="input-line">
+                <span class="title">营业期限截止日期</span>
+                <input type="text" class="corp-input" v-model="form.endBusiness">
+            </div>
+
+            <div class="input-line">
+                <span class="title">工商信息登记机关</span>
+                <input type="text" class="corp-input" v-model="form.regAuthority">
+            </div>
+
+            <div class="input-line">
+                <span class="title">核准日期</span>
+                <input type="text" class="corp-input" v-model="form.approvalDate">
+            </div>
+
+            <div class="input-line">
+                <span class="title">登记状态</span>
+                <input type="text" class="corp-input" v-model="form.regStatus">
+            </div>
+
+            <div class="input-line">
+                <span class="title">住所地址</span>
+                <input type="text" class="corp-input" v-model="form.address">
+            </div>
+
+            <div class="input-line">
+                <span class="title">经营范围</span>
+                <input type="text" class="corp-input" v-model="form.businessScope">
+            </div>
+
+            <div class="input-line">
+                <span class="title">统一社会信用代码</span>
+                <input type="text" class="corp-input" v-model="form.creditCode">
+            </div>
+        </div>
+        <div class="btn-controls">
+            <button class="submit-btn" @click="submit">提交</button>
+            <button class="return-btn" @click="btnreturn">返回</button>
+        </div>
+    </div>
+    
+</body>
+<script src="/public/pages/student/details/corpbinding.js"></script>
+</html>

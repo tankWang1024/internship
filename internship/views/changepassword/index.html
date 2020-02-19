@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>毕业生实习更改密码</title>
+    <link rel="stylesheet" href="/public/pages/login/index/index.css">
+    <link rel="stylesheet" href="/public/css/reset.css">
+    <script src="/public/js/jquery.js"></script>
+    <script src="public/js/utils.js"></script>
+    <script src="/public/pages/changepassword/index.js"></script>
+    <script src="/public/js/config.js"></script>
+    <script src="/public/js/layer/layer.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="login-main" id="login-box">
+            <div class="logo-line">
+                <img src="../../../public/img/logo.png" alt="" class="login-logo">
+            </div>
+            <div class="tittle-line">修改你的密码</div>
+            <div class="is_display">
+                <input type="text" name="" class="account">
+                <input type="password" name="" class="account">
+            </div>
+
+            <div class="login-form">
+                <div class="login-row login-text">
+                    <label for="account">账号</label>
+                    <input type="text" name="" id="account">
+                </div>
+                <div class="login-row login-text">
+                    <label for="account">身份证</label>
+                    <input type="text" name="" id="idcard">
+                </div>
+                <div class="login-row login-text">
+                    <label for="password">密码</label>
+                    <input type="password" name="" id="password">
+                </div>
+                <div class="login-row login-text">
+                    <label for="password">再次输入密码</label>
+                    <input type="password" name="" id="password2">
+                </div>
+            </div>
+            <div class="login-IDradio">
+                <div class="identity-check">
+                    <label for="student-radio">
+                        <input type="radio" name="identity" id="student-radio" value="Student">
+                        学生</label>
+
+                    <label for="teacher-radio">
+                        <input type="radio" name="identity" id="teacher-radio" value="Teacher">
+                        教师</label>
+                </div>
+            </div>
+            <button class="land-btn">确认修改密码</button><a href="/">返回登录界面</a>
+        </div>
+    </div>
+</body>
+</html>

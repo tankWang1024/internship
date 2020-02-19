@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的信息</title>
+    <link rel="stylesheet" href="../../../public/css/nav.css">
+    <link rel="stylesheet" href="../../../public/css/reset.css">
+    <link rel="stylesheet" href="../../../public/css/iconfont.css">
+    <script src="/public/js/jquery.js"></script>
+    <script src="/public/js/layer/layer.js"></script>
+    <script src="/public/js/utils.js"></script>
+    <link rel="stylesheet" href="/public/pages/student/details/details.css">
+    <script src="/public/js/config.js"></script>
+    <script src="/public/js/template-web.js"></script>
+    <script src="/public/js/My97DatePicker/WdatePicker.js"></script>
+    <!-- <script src="../../../public/js/nav.js"></script> -->
+    <script src="/public/pages/student/details/details.js"></script>
+</head>
+    
+<body>
+<!--导航-->
+<div class="nav">
+    <div class="item active">
+        <div class="nav-main">我的信息</div>
+    </div>
+    <div class="item">
+        <div class="nav-main">报告册填写</div>
+        <ul class="list">
+            <li><button>第一阶段填写</button></li>
+            <li><button>第二阶段填写</button></li>
+        </ul>
+    </div>
+    <div class="item">
+        <div class="nav-main">鉴定表填写</div>
+    </div>
+    <div class="item logout">
+        <div class="content"><span class="iconfont icon-zhuxiao"></span>注销</div>
+    </div>
+</div>
+<!--我的信息部分-->
+
+<div class="details-window">
+    <div class="student-info">
+        <div class="title">学生信息<span><span class="iconfont icon-shang"></span>修改信息</span></div>
+        <div class="text"><span>姓名</span>加载中</div>
+        <div class="text"><span>学号</span>加载中</div>
+        <div class="text"><span>微信</span>加载中</div>
+        <div class="text"><span>年龄</span>加载中</div>
+        <div class="text"><span>qq</span>加载中</div>
+        <div class="text"><span>电话</span>加载中</div>
+        <div class="text"><span>专业</span>加载中</div>
+        <div class="text"><span>实习岗位</span>加载中</div>
+        <div class="text"><span>实习企业</span>加载中</div>
+        <div class="text"><span>身份证号</span>加载中</div>
+        <div class="text gmtstart"><span>实习开始时间</span><span class="show-text">未到填写时间</span></div>
+        <div class="text gmtend"><span>实习结束时间</span><span class="show-text">未到填写时间</span></div>
+        <div class="text">加载中</div>
+        <div class="text"><span>修改密码</span><br><input type="text" name="pswchange" placeholder="旧密码" id="pswchange"><br><input type="text" name="pswchange" placeholder="新密码" id="pswchange"><button class="psw-btn">修改</button></div>
+        <div class="text"></div>
+        <div class="controls"><button>实习报告表</button><button>实习鉴定表</button></div>
+    </div>
+    <div class="teacher-info">
+        <div class="title">导师信息</div>
+
+        
+    </div>
+    <div class="company-info">
+        <div class="title">绑定企业</div>
+        
+        <label for="work">
+            <div class="block">
+                <span class="company-title">实习岗位</span><input class="bind-input" id="position" name="position" type="text">
+            </div>
+            <!-- <button class="bind-btn">实习职位绑定</button> -->
+            <button class="position-binding">实习岗位绑定</button>
+        </label>
+        
+
+
+        <div class="bind-controls"><button class="bind-btn">进入企业绑定</button></div>
+
+    </div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+body{
+    background-color: #f1f1f1;
+}
+.window{
+    background-color: white;
+    width: 800px;
+    margin: 25px auto;
+    padding: 20px;
+    /* border: 1px solid black; */
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 2px #c5baba;
+}
+.title{
+    text-shadow: 1px 1px 1px rgb(218, 213, 213);
+    font-size: 20px;
+    border-bottom: 5px solid #47c1bc;
+}
+.msg-block{
+    margin-bottom: 20px;
+}
+.text{
+    padding: 5px 0;
+}
+.content{
+    padding: 10px 0;
+}
+.content-name,.name{
+    margin-right: 5px;
+    color: #329e78;
+    font-weight: bold;
+}
+.content-name{
+    padding: 5px 0;
+    border-bottom: 1px solid #f1f1f1;
+}
+.inner-content{
+    line-height: 1.6em;
+    padding: 5px 0;
+}
+.time{
+    font-size: 14px;
+    color: #9a9999;
+
+}
+.time-text{
+    margin-right: 5px;
+}
+.window-tittle {
+    font-size: 30px;
+    text-shadow: 1px 1px 3px rgb(218, 213, 213);
+}
+
+.download-controls{
+    text-align: center;
+    margin-bottom: 25px;
+}
+.download-btn{
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    background-color:#07c160 ;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+.download-btn:hover{
+    background-color: #06984c;
+}
+.return-btn{
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    background-color:#9653b9 ;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+.return-btn:hover{
+    background-color: #75428f;
+}

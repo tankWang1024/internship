@@ -1,0 +1,6 @@
+.line-one{
+    display: flex;
+}
+.line-one .content{
+    flex: 1;
+}

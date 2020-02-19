@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>学生信息</title>
+    <script src="/public/js/utils.js"></script>
+    <link rel="stylesheet" href="../../../public/css/reset.css">
+    <link rel="stylesheet" href="../../../public/css/studentlist.css">
+    <link rel="stylesheet" href="../../../public/css/nav.css">
+    <script src="/public/js/config.js"></script>
+    <script src="../../../public/js/jquery.js"></script>
+    <script src="/public/js/layer/layer.js"></script>
+    <!-- <script src="../../../public/js/nav.js"></script> -->
+    <script src="public/pages/teacher/js/public.js"></script>
+    <script src="/public/pages/teacher/report-stuList/studentlist.js"></script>
+
+</head>
+
+<body>
+    <div class="nav">
+        <div class="item active stu-nav">
+            <div class="nav-main">学生信息</div>
+        </div>
+        <div class="item rep-nav">
+            <div class="nav-main">报告册评价</div>
+        </div>
+        <div class="item decision-nav">
+            <div class="nav-main">鉴定表评价</div>
+        </div>
+        <div class="item logout">
+            <div class="content"><span class="iconfont icon-zhuxiao"></span>注销</div>
+        </div>
+    </div>
+
+    <div class="stuList-wrap">
+        <div class="list-title">
+            学生信息<input type="text" class="search-input" placeholder="搜索学生">
+            
+            <!-- 单选框 -->
+            <div class="filter-box">
+                <label><input type="radio" name="filter" class="filter-radio" checked>全部</label>
+                <label><input type="radio" name="filter" class="filter-radio">已填完</label>
+                <label><input type="radio" name="filter" class="filter-radio">未填写</label>
+            </div>
+            
+        </div>
+        <table class="stuList-table">
+            <thead class="stuList-thead">
+                <tr>
+                    <th class="stuList-th">
+                        学号
+                    </th>
+                    <th class="stuList-th">
+                        姓名
+                    </th>
+                    <th class="stuList-th">
+                        性别
+                    </th>
+                    <th class="stuList-th">
+                        年龄
+                    </th>
+                    <th class="stuList-th">
+                        学院
+                    </th>
+                    <th class="stuList-th">
+                        专业
+                    </th>
+                    <th class="stuList-th">
+                        实习企业
+                    </th>
+                    <th class="stuList-th">
+                        校外指导老师工号
+                    </th>
+                    <th class="stuList-th">
+                        联系方式
+                    </th>
+                    <th class="stuList-th">
+                        报告册
+                    </th>
+                    <th class="stuList-th">
+                        鉴定表
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+        <!-- <div class="showtoast">暂无学生信息!</div> -->
+    </div>
+</body>
+<script>
+    
+</script>
+
+</html>

@@ -1,0 +1,228 @@
+body{
+    background-color: #f1f1f1;
+}
+.details-window{
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 500px;
+    background-color: white;
+    padding: 20px 30px;
+    /* height: 500px; */
+    box-shadow: 1px 1px 2px 3px #e6e5e5;
+}
+.student-info,.company-info{
+    margin-bottom: 20px;
+    border-bottom: 1px solid #f1f1f1;
+}
+.text{
+    padding: 5px 0;
+}
+.text span{
+    padding-right: 6px;
+    color: #329e78;
+}
+.title{
+    margin-bottom: 5px;
+    font-size: 22px;
+    border-bottom: 5px solid #47c1bc;
+}
+.controls{
+    text-align: center;
+}
+.controls button{
+    padding: 7px 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.controls button:first-of-type{
+    margin-right: 5px;
+    background-color: #07c160;
+}
+.controls button:last-of-type{
+    margin-left: 5px;
+    background-color: #aa9be0;
+}
+.controls button:first-of-type:hover{
+    background-color: #06984c;
+}
+.controls button:last-of-type:hover{
+    background-color: #8479ac;
+}
+.bind-btn{
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.bind-controls{
+    text-align: center;
+    
+}
+.bind-controls button{
+    padding: 10px 25px;
+    font-size: 18px;
+    border-radius: 20px;
+    background-color: #07c160;
+    color: white;
+    transition: 0.3s;
+}
+.bind-controls button:hover{
+    background-color: #06984c;
+}
+.bind-input{
+    margin-left: 5px;
+    padding: 7px 5px;
+    border-radius: 18px;
+    border: 2px solid #cbcbcb;
+    font-size: 18px;
+    /* display: block; */
+    outline: none;
+    width: 50%;
+    
+}
+.block{
+    position: relative;
+    text-align: center;
+    margin: 20px auto;
+}
+.company-title{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform:translateY(-50%);
+    font-size: 18px;
+}
+.selectTeacher{
+    padding: 20px 0;
+}
+.tips{
+    margin-bottom: 20px;
+}
+#selectTeacher{
+    padding: 10px;
+    font-size: 20px;
+}
+#selectTeacher option{
+    display: inline-block;
+    height: 30px ;
+    padding: 5px;
+}
+.select-btn{
+    vertical-align: text-bottom;
+    background-color: #07c160;
+    color: white;
+    transition: 0.3s;
+    border: none;
+    padding: 7px 15px;
+    border-radius: 10px;
+    margin-left: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+}
+.select-btn:hover{
+    background-color: #06984c;
+}
+.select-controls{
+    display: flex;
+    align-items: center;
+}
+.psw-btn{
+    margin-left: 20px;
+    border: none;
+    background-color: #07C160;
+    color: white;
+    padding: 2px 8px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+input[name="pswchange"]{
+    border-radius: 3px;
+    padding: 2px;
+    border:1px solid #d3d3d3;
+}
+.position-binding{
+    background-color: #aa9be0;
+    border: none;
+    color: white;
+    outline: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+.changedetails{
+    user-select: none;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #47c1bc;
+    color: white;
+    padding: 5px;
+    float: right;
+}
+.changecontent{
+    display: none;
+    box-shadow: 0 0 3px 2px #f1f1f1;
+    border-radius: 5px;
+    /* display: flex; */
+    flex-direction: column;
+    padding: 20px;
+    border: 1px solid #f1f1f1;
+    position: absolute;
+    right: 20px;
+}
+.changecontent input{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #f1f1f1;
+    padding: 5px 0;
+    margin-bottom: 5px;
+    letter-spacing: 1.6px;
+}
+.changetitle{
+    margin-bottom: 5px;
+}
+.details-btn{
+    background-color: #aa9be0;
+    padding: 5px;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.details-window{
+    position: relative;
+}
+.show-text{
+    color: #333 !important;
+}
+.date-submit{
+    border: none;
+    padding: 3px 5px;
+    color: white;
+    border-radius: 3px;
+    background-color: #07C160;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.date-submit:hover{
+    background-color: #06984c;
+}
+.icon-shang{
+    display: inline-block;
+    
+}
+.down{
+    transform: rotate(180deg);
+}
+.up{
+    transform: rotate(0deg);
+}
+.date-submit{
+    margin-left: 205px;
+}

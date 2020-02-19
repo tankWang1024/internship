@@ -1,0 +1,69 @@
+* {
+    font-family: "微软雅黑";
+}
+.page-title-2{
+    letter-spacing: 1px;
+    width: 100%;
+    height:28px;
+    line-height:28px;
+    text-align: center;
+    font-size: 24px;
+    color: #000;
+    margin-top:20px;
+}
+.page-title-3{
+    letter-spacing: 1px;
+    width: 100%;
+    line-height:10px;
+    text-align: center;
+    font-size: 16px;
+    color: #000;
+    margin-bottom:20px;
+}
+.notify-content{
+    padding: 3px;
+    text-align: center;
+    min-height:400px;
+    box-shadow: 1px 1px 5px 6px #f4f3f3;
+    border-radius: 15px;
+}
+.page{
+    width: 95%;
+    margin: auto;
+    height: 30px;
+    padding-top: 5px;
+}
+.page div{
+    display: inline-block;
+    width: 49%;
+    text-align: center;
+}
+.page div:hover {
+    cursor: pointer;
+}
+.header-top{
+    margin: 0 auto auto 0;
+    width:1250px;
+    height:114px;
+    background:url("/public/img/logo.png") 0 0 no-repeat;
+}
+.main-nav{background:#0170C1;text-align:center;width:100%;  height: 48px;top:0; padding:0 0px; margin:0 0px;z-index:9999;display: table;box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);}
+.navbar {  position: relative;  }
+.navbar-default {margin: 0 auto;width:1250px;}
+.navbar-nav > li { float: left;}
+.navbar-nav > li > a {   display:block;font-size: 15px;  color:#fff;  padding-bottom: 0;  padding-top: 0;    padding-left: 0;-webkit-font-smoothing:antialiased;}
+.navbar-default ul li a {  line-height: 48px;  padding-right: 40px;}/*---------------------------------------------间距*/
+
+/*  --------------------------------------------------------------------------括号效果 */
+.navbar-nav > li >  a::after,
+.navbar-nav > li >  a::before {	display: inline-block;	opacity: 0;	-webkit-transition: -webkit-transform .3s, opacity .2s;
+    -moz-transition: -moz-transform .3s, opacity .2s;	transition: transform .3s, opacity .2s}
+.navbar-nav > li >  a::before {	margin-right: 5px;	content: '[';	-webkit-transform: translateX(20px);	-moz-transform: translateX(20px);	transform: translateX(20px)}
+.navbar-nav > li >  a::after {	margin-left: 5px;	content: ']';	-webkit-transform: translateX(-20px);	-moz-transform: translateX(-20px);	transform: translateX(-20px)}
+.navbar-nav > li >  a:focus::after,
+.navbar-nav > li >  a:focus::before,
+.navbar-nav > li >  a:hover::after,
+.navbar-nav > li >  a:hover::before {	opacity: 1;	-webkit-transform: translateX(0);	-moz-transform: translateX(0);	transform: translateX(0)}
+.navbar-nav li {
+    list-style: none;
+}

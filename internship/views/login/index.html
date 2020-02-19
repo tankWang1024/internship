@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>毕业生实习登陆</title>
+    <link rel="stylesheet" href="/public/pages/login/index/index.css">
+    <link rel="stylesheet" href="/public/css/reset.css">
+    <script src="/public/js/jquery.js"></script>
+    <script src="public/js/utils.js"></script>
+    <script src="/public/pages/login/index/index.js"></script>
+    <script src="/public/js/config.js"></script>
+    <script src="/public/js/layer/layer.js"></script>
+</head>
+
+<body>
+    <div id="tip">
+        <h4>下拉查看通知</h4>
+    </div>
+    <div class="wrap">
+        <div class="login-main" id="login-box">
+            <div class="logo-line">
+                <img src="../../../public/img/logo.png" alt="" class="login-logo">
+            </div>
+            <div class="tittle-line">毕业生实习管理系统</div>
+            <div class="is_display">
+                <input type="text" name="" class="account">
+                <input type="password" name="" class="account">
+            </div>
+            <div class="login-form">
+                <div class="login-row login-text">
+                    <label for="account">账号</label>
+                    <input type="text" name="" id="account">
+                </div>
+                <div class="login-row login-text">
+                    <label for="password">密码</label>
+                    <input type="password" name="" id="password">
+                </div>
+
+                <div class="login-row login-text">
+                    <label for="verifyimg" style="display: inline-block">验证码</label>
+                    <div class="verifycode"><img id="verifyimg" src=""></div>
+                    <div class="verifycode-tip"><span>不区分大小写</span><a class="refreshcode">点击刷新验证码</a></div>
+                    <input type="text" name="" id="verifycode">
+                </div>
+
+                <div class="login-IDradio">
+                    <div class="identity-check">
+                        <label for="student-radio">
+                            <input type="radio" name="identity" id="student-radio" value="Student">
+                            学生</label>
+
+                        <label for="teacher-radio">
+                            <input type="radio" name="identity" id="teacher-radio" value="Teacher">
+                            教师</label>
+                    </div>
+                </div>
+            </div>
+            <button class="land-btn">登陆</button><a href="changepassword">忘记密码？</a>
+            <a href="mailto:qkmc@outlook.com">网站功能异常反馈：qkmc@outlook.com</a>
+        </div>
+        <div class="login-main" id="notify-box">
+            <div class="tittle-line">通知<a style="font-size: 10px" href="/notify">更多>></a></div>
+            <div class="notify-content">
+                <ul class="notice" style="float: left;width: 95%">
+                <!--                    jquery add content here-->
+                </ul>
+            </div>
+        </div>
+
+        <!-- 这里面借用了很多login里面的样式，所以不要搞混了 -->
+        <div class="register-main login-main" id="register-box" style="display: none;">
+            <div class="logo-line">
+                <img src="../../../public/img/logo.png" alt="" class="login-logo">
+            </div>
+            <div class="tittle-line">毕业生实习管理系统</div>
+            <div class="register-form">
+                <div class="login-row login-text">
+                    <label for="account">账号</label>
+                    <input type="text" name="" id="reg-account">
+                    <div class="warn-word">用户名不能为空</div>
+                </div>
+
+                <div class="login-row login-text">
+                    <label for="account">身份证号码</label>
+                    <input type="text" name="" id="reg-idcard">
+                    <div class="warn-word">身份证号码不能为空</div>
+                </div>
+
+                <div class="login-row login-text">
+                    <label for="password">密码<p style="color: red; font-size: 11px;">密码大于12位,且包含大小写英文,数字以及特殊符号</p></label>
+                    <input type="password" name="" id="reg-password" placeholder="请输入密码">
+                    <input type="password" name="" id="re-reg-password" placeholder="请再次输入密码">
+                    <div class="warn-word">密码大于12位,且包含大小写英文,数字以及特殊符号</div>
+                </div>
+
+                <div class="login-row login-text">
+                    <label for="verifyimg" style="display: inline-block">验证码</label>
+                    <div class="verifycode"><img class="verifyimg" id="reg-verifyimg" src=""></div>
+                    <div class="verifycode-tip"><span>不区分大小写</span><a class="reg-refreshcode">点击刷新验证码</a></div>
+                    <input type="text" name="" id="reg-verifycode">
+                    <div class="warn-word">验证码不能为空</div>
+                </div>
+
+                <div class="login-IDradio">
+                    <div class="identity-check">
+                        <label for="student-radio">
+                            <input type="radio" name="identity" id="reg-student-radio" value="Student">
+                            学生</label>
+
+                        <label for="teacher-radio">
+                            <input type="radio" name="identity" id="reg-teacher-radio" value="Teacher">
+                            教师</label>
+                    </div>
+                </div>
+            </div>
+            <button class="reg-land-btn">设置密码</button>
+        </div>
+
+    </div>
+</body>
+</html>

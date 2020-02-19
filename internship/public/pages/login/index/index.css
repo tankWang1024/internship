@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+div {
+  box-sizing: border-box;
+}
+body {
+  cursor: default;
+  background-color: #20bff6;
+}
+a {
+  text-decoration: none;
+  font-family: "Arial Black";
+}
+.wrap {
+  width: 980px;
+  height: 900px;
+  margin: 45px auto;
+  background-color: rgb(95, 185, 212);
+  background-color: white;
+  color: white;
+  border-radius: 15px;
+  /* box-shadow: rgba(52, 139, 165, 0.5) 1px 1px, rgba(52, 139, 165, 0.5) 2px 2px,
+    rgba(52, 139, 165, 0.5) 3px 3px, rgba(52, 139, 165, 0.5) 4px 4px,
+    rgba(52, 139, 165, 0.5) 5px 5px, rgba(52, 139, 165, 0.5) 6px 6px,
+    rgba(52, 139, 165, 0.5) 7px 7px, rgba(52, 139, 165, 0.5) 8px 8px,
+    rgba(52, 139, 165, 0.5) 9px 9px, rgba(52, 139, 165, 0.5) 10px 10px,
+    rgba(52, 139, 165, 0.5) 11px 11px, rgba(52, 139, 165, 0.5) 12px 12px,
+    rgba(52, 139, 165, 0.5) 13px 13px, rgba(52, 139, 165, 0.5) 14px 14px,
+    rgba(52, 139, 165, 0.5) 15px 15px, rgba(52, 139, 165, 0.5) 16px 16px,
+    rgba(52, 139, 165, 0.5) 17px 17px, rgba(52, 139, 165, 0.5) 18px 18px,
+    rgba(52, 139, 165, 0.5) 19px 19px, rgba(52, 139, 165, 0.5) 20px 20px,
+    rgba(52, 139, 165, 0.5) 21px 21px, rgba(52, 139, 165, 0.5) 22px 22px,
+    rgba(52, 139, 165, 0.5) 23px 23px, rgba(52, 139, 165, 0.5) 24px 24px,
+    rgba(52, 139, 165, 0.5) 25px 25px, rgba(52, 139, 165, 0.5) 26px 26px,
+    rgba(52, 139, 165, 0.5) 27px 27px, rgba(52, 139, 165, 0.5) 28px 28px,
+    rgba(52, 139, 165, 0.5) 29px 29px, rgba(52, 139, 165, 0.5) 30px 30px,
+    rgba(52, 139, 165, 0.5) 31px 31px, rgba(52, 139, 165, 0.5) 32px 32px,
+    rgba(52, 139, 165, 0.5) 33px 33px, rgba(52, 139, 165, 0.5) 34px 34px,
+    rgba(52, 139, 165, 0.5) 35px 35px, rgba(52, 139, 165, 0.5) 36px 36px,
+    rgba(52, 139, 165, 0.5) 37px 37px, rgba(52, 139, 165, 0.5) 38px 38px,
+    rgba(52, 139, 165, 0.5) 39px 39px, rgba(52, 139, 165, 0.5) 40px 40px,
+    rgba(52, 139, 165, 0.5) 41px 41px, rgba(52, 139, 165, 0.5) 42px 42px,
+    rgba(52, 139, 165, 0.5) 43px 43px, rgba(52, 139, 165, 0.5) 44px 44px,
+    rgba(52, 139, 165, 0.5) 45px 45px, rgba(52, 139, 165, 0.5) 46px 46px,
+    rgba(52, 139, 165, 0.5) 47px 47px, rgba(52, 139, 165, 0.5) 48px 48px,
+    rgba(52, 139, 165, 0.5) 49px 49px, rgba(52, 139, 165, 0.5) 50px 50px,
+    rgba(52, 139, 165, 0.5) 51px 51px, rgba(52, 139, 165, 0.5) 52px 52px,
+    rgba(52, 139, 165, 0.5) 53px 53px, rgba(52, 139, 165, 0.5) 54px 54px,
+    rgba(52, 139, 165, 0.5) 55px 55px, rgba(52, 139, 165, 0.5) 56px 56px,
+    rgba(52, 139, 165, 0.5) 57px 57px, rgba(52, 139, 165, 0.5) 58px 58px,
+    rgba(52, 139, 165, 0.5) 59px 59px, rgba(52, 139, 165, 0.5) 60px 60px,
+    rgba(52, 139, 165, 0.5) 61px 61px, rgba(52, 139, 165, 0.5) 62px 62px,
+    rgba(52, 139, 165, 0.5) 63px 63px, rgba(52, 139, 165, 0.5) 64px 64px,
+    rgba(52, 139, 165, 0.5) 65px 65px, rgba(52, 139, 165, 0.5) 66px 66px,
+    rgba(52, 139, 165, 0.5) 67px 67px, rgba(52, 139, 165, 0.5) 68px 68px,
+    rgba(52, 139, 165, 0.5) 69px 69px, rgba(52, 139, 165, 0.5) 70px 70px,
+    rgba(52, 139, 165, 0.5) 71px 71px, rgba(52, 139, 165, 0.5) 72px 72px,
+    rgba(52, 139, 165, 0.5) 73px 73px, rgba(52, 139, 165, 0.5) 74px 74px,
+    rgba(52, 139, 165, 0.5) 75px 75px, rgba(52, 139, 165, 0.5) 76px 76px,
+    rgba(52, 139, 165, 0.5) 77px 77px, rgba(52, 139, 165, 0.5) 78px 78px,
+    rgba(52, 139, 165, 0.5) 79px 79px, rgba(52, 139, 165, 0.5) 80px 80px,
+    rgba(52, 139, 165, 0.5) 81px 81px, rgba(52, 139, 165, 0.5) 82px 82px,
+    rgba(52, 139, 165, 0.5) 83px 83px, rgba(52, 139, 165, 0.5) 84px 84px,
+    rgba(52, 139, 165, 0.5) 85px 85px, rgba(52, 139, 165, 0.5) 86px 86px,
+    rgba(52, 139, 165, 0.5) 87px 87px, rgba(52, 139, 165, 0.5) 88px 88px,
+    rgba(52, 139, 165, 0.5) 89px 89px, rgba(52, 139, 165, 0.5) 90px 90px,
+    rgba(52, 139, 165, 0.5) 91px 91px, rgba(52, 139, 165, 0.5) 92px 92px,
+    rgba(52, 139, 165, 0.5) 93px 93px, rgba(52, 139, 165, 0.5) 94px 94px,
+    rgba(52, 139, 165, 0.5) 95px 95px, rgba(52, 139, 165, 0.5) 96px 96px,
+    rgba(52, 139, 165, 0.5) 97px 97px, rgba(52, 139, 165, 0.5) 98px 98px,
+    rgba(52, 139, 165, 0.5) 99px 99px, rgba(52, 139, 165, 0.5) 100px 100px; */
+    box-shadow: 1px 1px 5px 6px #1aa3cb;
+}
+.login-main {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+input[type="password"]{
+  letter-spacing: 3px;
+}
+.logo-line {
+  width: 100%;
+  height: 35px;
+  margin-bottom: 31px;
+  border-bottom: 2px solid #dedbdb;
+  text-align: center;
+}
+.login-logo {
+  height: 66px;
+  padding: 0 20px;
+  /* background-color: rgb(95, 185, 212); */
+  background-color: white;
+}
+.tittle-line {
+  color: black;
+  width: 100%;
+  margin-top: 50px;
+  font-size: 35px;
+  text-align: center;
+  text-shadow: 1px 1px 1px gray;
+}
+.login-form {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.login-row {
+  color: black;
+  width: 100%;
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 50px;
+  position: relative;
+}
+.login-text > input {
+  margin-top: 5px;
+  width: 100%;
+  line-height: 40px;
+  padding: 0 15px;
+  font-size: 24px;
+}
+input {
+  outline: none;
+  border: 1px solid #cbcbcb;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.identity-check {
+  justify-content: center;
+  display: flex;
+}
+.identity-check > label {
+  color: black;
+    width: 33.3%;
+    padding: 5px 8px;
+    box-sizing: border-box;
+}
+.land-btn {
+  transition: 0.3s;
+  display: block;
+  box-sizing: content-box;
+  padding: 10px 100px;
+  margin: 0 auto;
+  margin-top: 40px;
+  font-size: 24px;
+  border-radius: 8px;
+  color: white;
+  background-color: #07c160;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.reg-land-btn{
+  transition: 0.3s;
+  display: block;
+  box-sizing: content-box;
+  padding: 10px 100px;
+  margin: 0 auto;
+  margin-top: 40px;
+  font-size: 24px;
+  border-radius: 8px;
+  color: white;
+  background-color: #07c160;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.land-btn:hover {
+  color: #f1f1f1;
+  background-color: #05aa54;
+}
+
+/* .account{
+  color: black;
+} */
+
+.warn-word {
+  position: absolute;
+  color: red;
+  font-size: 14px;
+  line-height: 40px;
+  display: none;
+}
+.verifycode{
+  width: 100px;
+  margin: auto;
+  display: inline-block;
+}
+.verifycode-tip{
+  font-size: 14px;
+
+}
+.verifycode-tip a {
+  color: #05aa54;
+  text-decoration: none;
+}
+.is_display {
+  position: absolute;
+  left: -10000px;
+  top: -10000px;
+}
+#notify-box{
+  margin-top: 45px;
+  margin-bottom: 80px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px 6px #1E9FFF;
+  height: 300px;
+  width: 50%;
+}
+.notify-content{
+  /*border: dashed 1px #1E9FFF;*/
+  height: 170px;
+  margin: 5px 10px -5px 10px;
+}
+.notice{
+  display: block;
+  padding: 0px 14px;
+  letter-spacing: 0.5px;
+}
+.notice li{
+  position: relative;
+  padding: 0px 48px 0px 0px;
+  border-bottom: 1px dashed #A7E2E7;
+}
+.notice li a{
+  display:block;
+  height:39px;
+  width:100%;
+  line-height:38px;
+  font-size:14px;
+  color:#000;
+  word-break:break-all;
+}
+.notice li span{position:absolute; right:0; top:0; line-height:36px; color:#bbb; text-align:center;}
+.notice li:last-child{border:0;}
+
+#tip{
+  width: 130px;
+  height: 60px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px 6px lightgrey;
+  position: fixed;
+  right: 70px;
+  bottom: 500px;
+  border: 1px solid aquamarine;
+}
+#tip h4{
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  line-height: 60px;
+}

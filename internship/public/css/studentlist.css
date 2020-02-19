@@ -1,0 +1,112 @@
+body {
+    cursor: default;
+}
+.list-title {
+    font-size: 35px;
+    margin-top: 20px;
+    text-align: center;
+    /* overflow: hidden; */
+    position: relative;
+}
+.search-input{
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 5px;
+    width: 200px;
+    vertical-align: middle;
+}
+
+
+
+.filter-box {
+    font-size: 14px;
+    position: absolute;
+    right:20px;
+    top: 100%;
+    transform: translateY(-50%);
+    padding: 5px;
+}
+.filter-box label {
+    margin: 0 5px;
+}
+.filter-box input {
+    vertical-align: middle;
+}
+
+
+.stuList-wrap {
+    width: 1200px;
+    /* margin: 0 auto; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+
+.stuList-table {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.stuList-thead{
+     border-bottom: 3px solid  rgb(54, 144, 172); 
+}
+
+.stuList-th {
+    text-align: center;
+    padding: 5px 14px;
+    font-size: 24px;
+}
+
+.stuList-row {
+    transition: 0.3s;
+    border-bottom: 1px solid  rgb(95, 185, 212);
+}
+.stuList-row:hover {
+    background-color: rgb(138, 208, 248);
+}
+.stuList-row > td {
+    padding: 5px 5px;
+    text-align: center;
+}
+
+.line-row {
+    padding: 4px 6px 4px 4px;
+}
+
+.check {
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+
+    outline: none;
+    border: 1px solid #dedede;
+    border-radius: 5px;
+}
+.check:hover {
+    border-color: rgb(146, 209, 212);
+    background-color: rgb(146, 209, 212);
+}
+.checked {
+    text-align: center;
+    color: green;
+}
+.unchecked {
+    text-align: center;
+    color: red;
+}
+.checking{
+    color: orange;
+    text-align: center;
+}
+.align-center{
+    text-align:center;
+}
+.showtoast{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+    color: #ff8600;
+}

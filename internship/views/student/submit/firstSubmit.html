@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>第一阶段报告册填写</title>
+    <script src="../../../public/js/jquery.js"></script>
+    <script src="/public/js/layer/layer.js"></script>
+    <script src="/public/js/config.js"></script>
+    <script src="/public/js/My97DatePicker/WdatePicker.js"></script>
+    <link rel="stylesheet" href="../../../public/css/nav.css">
+    <link rel="stylesheet" href="../../../public/css/reset.css">
+    <script src="../../../public/js/utils.js"></script>
+    <link rel="stylesheet" href="/public/pages/student/submit/submit.css">
+    <script src="/public/pages/student/submit/firstsubmit.js"></script>
+</head>
+
+<body>
+    <div class="showToast">
+            该阶段尚未开启!
+    </div>
+    <!--导航-->
+    <div class="nav">
+        <div class="item">
+            <div class="nav-main">我的信息</div>
+        </div>
+        <div class="item active">
+            <div class="nav-main">报告册填写</div>
+            <ul class="list">
+                <li><button>第一阶段填写</button></li>
+                <li><button>第二阶段填写</button></li>
+            </ul>
+        </div>
+        <div class="item">
+            <div class="nav-main">鉴定表填写</div>
+        </div>
+
+        <div class="item logout">
+            <div class="content"><span class="iconfont icon-zhuxiao"></span>注销</div>
+        </div>
+    </div>
+
+    <!--填写报告册-->
+    <form action="firstSubmit.html" method="post">
+        <div class="name">第一阶段填报报告表</div>
+        <label for="gmt_start">
+            <div class="title">指导时间段</div>
+            <!-- <input type="date" id="gmt_start" name="gmt_start"> -->
+            <input type="text" id="firtimeinput" onClick="WdatePicker({})">至
+            <input type="text" id="lasttimeinput" onClick="WdatePicker({})">
+        </label>
+
+        <label for="starttime">
+            <div class="title">填写时间</div>
+            <!-- <input type="text" id="starttime" name="starttime" onClick="WdatePicker({})"> -->
+            <input type="date" id="starttime" name="starttime"><span style="color: orangered;">若时间组件不生效,按照该格式填写时间: 1995-07-26</span>
+        </label>
+        <label for="text">
+            <div class="title">指导方式</div>
+            <input type="text" id="method" name="method">
+        </label>
+        <label for="summary">
+            <div class="title">实习总结</div>
+            <textarea name="summary" id="summary" cols="30" rows="20"></textarea>
+            <div class="limit"><span class="summary-num">0</span>/1050</div>
+        </label>
+        <br>
+        <button type="button" id="firtsubmit" class="submit">提交</button>
+    </form>
+</body>
+
+</html>

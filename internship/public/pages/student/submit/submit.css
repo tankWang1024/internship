@@ -1,0 +1,83 @@
+form{
+    position: relative;
+    width: 800px;
+    margin: auto;
+    border: 1px solid #f1f1f1;
+    padding: 20px 20px 60px 60px;
+}
+body{
+    position: relative;
+}
+.title{
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.name{
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    font-size: 30px;
+    border-bottom: 5px solid #47c1bc;
+}
+input[type="text"]{
+    padding: 5px 10px;
+    font-size: 18px;
+    border-radius: 10px;
+    width: 350px;
+    outline: none;
+    border: 1px solid #cdc9c9;
+}
+input[type="date"]{
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #cdc9c9;
+    margin-bottom: 5px;
+}
+textarea{
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 500px;
+    resize: none;
+    outline: none;
+    font-size: 17px;
+    border-radius: 5px;
+    border: 1px solid #cdc9c9;
+}
+.submit{
+    transition: 0.3s;
+    cursor: pointer;
+    background-color: #07c160;
+    padding: 12px 25px;
+    border-radius: 12px;;
+    color: white;
+    border: none;
+    font-size: 18px;
+    outline: none;
+    position: absolute;
+    left: 40%;
+    transform: translateX(-50%);
+    bottom: 10px;
+}
+.limit{
+    width: 520px;
+    text-align: right;
+    font-size: 14px;
+    color: gray;
+}
+.submit:hover{
+    background-color: #049c4d;
+}
+.showToast{
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    font-size: 30px;
+    color: red;
+    text-align:center;
+    line-height: 300px;
+    user-select: none;
+}
+#firtimeinput,#lasttimeinput{
+    width: 200px;
+}

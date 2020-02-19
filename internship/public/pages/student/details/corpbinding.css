@@ -1,0 +1,89 @@
+body{
+    background-color: #f4f3f3;
+}
+.wrap{
+    box-shadow: 1px 1px 2px 3px #f0eeee;
+    background-color: white;
+    margin: 30px auto;
+    width: 600px;
+    position: relative;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    overflow: hidden;
+}
+.wrap-block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    background-color: #07c160;
+}
+.wrap-title{
+    font-weight: bold;
+    font-size: 26px;
+    color: white;
+}
+.content{
+    margin-top: -20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    width: 80%;
+    background-color: white;
+    /* border: 1px solid gray; */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 9px 0px gray;
+}
+.title{
+    position: relative;
+    line-height: 30px;
+    width: 200px;
+    display: inline-block;
+    font-size: 18px;
+    color: #0690c9;
+}
+.corp-input{
+    border-radius: 10px;
+    padding: 5px;
+    width: 50%;
+    border: 1px solid #c9c5c5;
+    outline: none;
+}
+.input-line{
+    border-bottom: 1px solid #f1f1f1;
+    margin-bottom: 10px;
+    padding: 5px 0;
+}
+.btn-controls{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.submit-btn,.return-btn{
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    outline: none;
+}
+.submit-btn{
+    background-color: #07c160;
+}
+.return-btn{
+    background-color: #AA9BE0;
+}
+.submit-btn:hover{
+    background-color: #06984c;
+}
+.return-btn:hover{
+    background-color: #8479ac;
+}
+.required::before{
+    content: "*";
+    position: absolute;
+    top: 0;
+    left: -10px;
+    color: red;
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>报告册查看</title>
+    <link rel="stylesheet" href="../../../public/css/reset.css">
+    <link rel="stylesheet" href="../../../public/css/publicdetails.css">
+    <link rel="stylesheet" href="../../../public/css/form.css">
+    <script src="../../../public/js/jquery.js"></script>
+    <script src="/public/js/layer/layer.js"></script>
+    <script src="/public/js/utils.js"></script>
+    <script src="/public/js/config.js"></script>
+    <script src="/public/pages/teacher/report-comment/report-comment.js"></script>
+    <style>
+        .msg-block:last-of-type {
+            padding-top: 80px;
+            position: relative;
+        }
+
+        .flexbox {
+            display: flex;
+        }
+
+        .content-name {
+            flex: 1;
+        }
+
+        .black {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="window">
+        <div class="person-info">
+            <div class="window-tittle">
+                <span id="">加载中</span>报告册
+            </div>
+            <div class="content flexbox">
+                <div class="content-name">学院：<span id="" class="black">加载中</span></div>
+                <div class="content-name">专业：<span id="" class="black">加载中</span></div>
+            </div>
+            <div class="content flexbox">
+                <div class="content-name">姓名：<span id="" class="black">加载中</span></div>
+                <div class="content-name">学号：<span id="" class="black">加载中</span></div>
+            </div>
+            <div class="content flexbox">
+                <div class="content-name">学院指导教师：<span id="" class="black">加载中</span></div>
+                <div class="content-name">实习单位：<span id="" class="black">加载中</span></div>
+            </div>
+            <div class="content flexbox">
+                <div class="content-name">实习岗位：<span id="" class="black">加载中</span></div>
+                <div class="content-name">实习日期：<span id="" class="black">加载中</span>&nbsp;至&nbsp;<span id=""class="black">加载中</span></div>
+            </div>
+
+
+        </div>
+
+
+        <div class="msg-block">
+            <div class="first">
+                <div class="title">第一阶段</div>
+                <div class="content">
+                    <div class="content-name">第一阶段实习总结</div>
+                    <div class="inner-content">加载中</div>
+                    <div class="content-name">第一阶段实习指导方式</div>
+                    <div class="inner-content">加载中</div>
+                    <div class="time"><span class="time-text">时间</span><span class="time-inner"></span></div>
+                </div>
+
+            </div>
+            <div class="first-part">
+                    <div class="content">
+                            <div class="content-name">教师评语</div>
+                            <div class="inner-content">
+                                <textarea name="stage1Comment" id="stage1Comment" cols="30" rows="10"></textarea>
+                            </div>
+                            <input type="date" id="stage1Date" name="stage1Date">
+                        </div>
+            
+                        <div class="content">
+                            <div class="content-name">成绩评定</div>
+                            <select name="stage1Grade" id="stage1Grade"  class="rep-garde-select">
+                                <option value="优秀">优秀</option>
+                                <option value="良好">良好</option>
+                                <option value="中等">中等</option>
+                                <option value="及格">及格</option>
+                                <option value="不及格">不及格</option>
+                            </select>
+<!--                            <div class="content-name">成绩评定</div>-->
+<!--                            <div class="inner-content">-->
+<!--                                <textarea name="stage1Grade" id="stage1Grade" cols="30" rows="10"></textarea>-->
+<!--                            </div>-->
+                            <input type="date" id="stage1GradeDate" name="stage1GradeDate" style="display: block">
+                        </div>
+            </div>
+            
+        </div>
+
+        <div class="msg-block">
+            <div class="second">
+                    <div class="title">第二阶段</div>
+                    <div class="content">
+                        <div class="content-name">第二阶段实习总结</div>
+                        <div class="inner-content">
+                            暂无</div>
+                    <div class="content-name">第二阶段实习指导方式</div>
+                    <div class="inner-content">加载中</div>
+                        <div class="time"><span class="time-text">时间</span><span class="time-inner"></span></div>
+                    </div>
+            </div>
+            
+            <div class="sec-part">
+                    <div class="content">
+                            <div class="content-name">评语</div>
+                            <div class="inner-content">
+                                <textarea name="stage2Comment" id="stage2Comment" cols="30" rows="10" ></textarea>
+            
+                            </div>
+                            <input type="date" id="stage2Date" name="stage2Date">
+                        </div>
+            
+            
+                        <div class="content">
+                            <div class="content-name">成绩评定</div>
+                            <div class="inner-content">
+                                <textarea name="stage2Grade" id="stage2Grade" cols="30" rows="10" ></textarea>
+                            </div>
+                            <input type="date" id="stage2GradeDate" name="stage2GradeDate">
+                        </div>
+
+            </div>
+            
+        </div>
+        <div class="total-part">
+                <div class="msg-block">
+                        <div class="title">总评</div>
+                        <div class="content-name">评语</div>
+                        <textarea name="totalGrade" id="totalGrade" cols="30" rows="10" ></textarea>
+                        <br>
+                        <div class="content-name">
+                            实习成绩：
+                            <select name="totalScore" id="totalScore" class="rep-garde-select" >
+                                <option value="优秀">优秀</option>
+                                <option value="良好">良好</option>
+                                <option value="中等">中等</option>
+                                <option value="及格">及格</option>
+                                <option value="不及格">不及格</option>
+                            </select>
+                        </div>
+                        
+                    </div>
+
+        </div>
+        
+        <div class="msg-block">
+            <button class="submit" type="button" id="">提交</button>
+            <button class="return" id="">返回</button>
+        </div>
+</body>
+<script>
+    $(function () {
+        $('.return').click(function () {
+            window.history.back();
+            return false
+        })
+    })
+</script>
+
+</html>

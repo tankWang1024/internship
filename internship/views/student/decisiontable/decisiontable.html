@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>鉴定表填写</title>
+    <script src="/public/js/config.js"></script>
+    <link rel="stylesheet" href="../../../public/css/nav.css">
+    <link rel="stylesheet" href="../../../public/css/reset.css">
+    <script src="../../../public/js/utils.js"></script>
+    <script src="../../../public/js/jquery.js"></script>
+    <link rel="stylesheet" href="/public/pages/student/decisiontable/decisiontable.css">
+    <script src="/public/pages/student/decisiontable/decisiontable.js"></script>
+    <script src="/public/js/layer/layer.js"></script>
+</head>
+<body>
+    <div class="nav">
+        <div class="item">
+            <div class="nav-main">我的信息</div>
+        </div>
+        <div class="item">
+            <div class="nav-main">报告册填写</div>
+            <ul class="list">
+                <li><button>第一阶段填写</button></li>
+                <li><button>第二阶段填写</button></li>
+            </ul>
+        </div>
+        <div class="item active">
+            <div class="nav-main">鉴定表填写</div>
+        </div>
+        <div class="item logout">
+                <div class="content"><span class="iconfont icon-zhuxiao"></span>注销</div>
+            </div>
+    </div>
+
+    <!--意见表填写-->
+    <form  method="post">
+        <div class="name">实习鉴定表填写</div>
+        <label for="content">
+            <div class="title">实习内容</div>
+            <textarea type="text" id="practiceContent" name="practiceContent"></textarea>
+            <div class="limit"><span class="practice-num">0</span>/1200</div>
+        </label>
+        <label for="">
+            <div class="title">实习自我总结(简明扼要认真填写)</div>
+            <div class="tips">
+                <p>主要内容包括：</p>
+                <p>1.实习目的：要求言简意赅、点名主题。</p>
+                <p>2.实习单位及岗位介绍：要求详略得当、重点突出，着重介绍实习岗位。</p>
+                <p>3.实习内容及过程：要求内容详实、层次清楚；侧重实际动手能力和技能的培养、锻炼和提高，忌记账式或日记式的简单罗列。</p>
+                <p>4.实习总结及体会：要求条理清楚、逻辑性强；着重写出对实习内容的总结、体会和感受，特别是自己所学的专业理论与实践的差距和今后应努力的方向。</p>
+            </div>
+            <textarea name="selfSummary" id="selfSummary" cols="30" rows="10"></textarea>
+            <div class="limit"><span class="self-num">0</span>/1200</div>
+        </label>
+
+        <label for="content">
+            <div class="title">企业评价意见</div>
+            <textarea type="text" id="corpopinion" name="corpopinion"></textarea>
+            <!-- <div class="limit"><span class="practice-num">0</span>/1200</div> -->
+        </label>
+
+        <label for="content">
+            <div class="title">校外导师评价意见</div>
+            <textarea type="text" id="corpteacheropinion" name="corpteacheropinion"></textarea>
+            <!-- <div class="limit"><span class="practice-num">0</span>/1200</div> -->
+        </label>
+        <br>
+        <button class="submit" type="button" id="decisionsubmit">提交</button>
+    </form>
+</body>
+</html>

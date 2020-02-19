@@ -1,0 +1,38 @@
+*{
+    font-family: "Microsoft Yahei","Hiragino Sans GB","Helvetica Neue",Helvetica,tahoma,arial,"WenQuanYi Micro Hei",Verdana,sans-serif,"\5B8B\4F53";
+    font-size: 14px;
+    /*border: 1px solid salmon;*/
+}
+
+.page-container{
+    padding: 16px;
+}
+.mt-20{
+    margin-top: 20px;
+}
+.list-title:hover{
+    cursor: pointer;
+}
+.header-top{
+    margin: 0 auto auto 0;
+    width:1250px;
+    height:114px;
+    background:url("/public/img/logo.png") 0 0 no-repeat;
+}
+.main-nav{background:#0170C1;text-align:center;width:100%;  height: 48px;top:0; padding:0 0px; margin:0 0px;z-index:9999;display: table;box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);}
+.navbar {  position: relative;  }
+.navbar-default {margin: 0 auto;width:1250px;}
+.navbar-nav > li { float: left;  }
+.navbar-nav > li > a {   display:block;font-size: 15px;  color:#fff;  padding-bottom: 0;  padding-top: 0;    padding-left: 0;-webkit-font-smoothing:antialiased;}
+.navbar-default ul li a {  line-height: 48px;  padding-right: 40px;}/*---------------------------------------------间距*/
+
+/*  --------------------------------------------------------------------------括号效果 */
+.navbar-nav > li >  a::after,
+.navbar-nav > li >  a::before {	display: inline-block;	opacity: 0;	-webkit-transition: -webkit-transform .3s, opacity .2s;
+    -moz-transition: -moz-transform .3s, opacity .2s;	transition: transform .3s, opacity .2s}
+.navbar-nav > li >  a::before {	margin-right: 5px;	content: '[';	-webkit-transform: translateX(20px);	-moz-transform: translateX(20px);	transform: translateX(20px)}
+.navbar-nav > li >  a::after {	margin-left: 5px;	content: ']';	-webkit-transform: translateX(-20px);	-moz-transform: translateX(-20px);	transform: translateX(-20px)}
+.navbar-nav > li >  a:focus::after,
+.navbar-nav > li >  a:focus::before,
+.navbar-nav > li >  a:hover::after,
+.navbar-nav > li >  a:hover::before {	opacity: 1;	-webkit-transform: translateX(0);	-moz-transform: translateX(0);	transform: translateX(0)}

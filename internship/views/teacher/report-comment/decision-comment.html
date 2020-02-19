@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>鉴定表填写</title>
+    <link rel="stylesheet" href="../../../public/css/reset.css">
+    <script src="/public/js/utils.js"></script>
+    <script src="/public/js/config.js"></script>
+    <link rel="stylesheet" href="../../../public/css/form.css">
+    <link rel="stylesheet" href="../../../public/css/publicdetails.css">
+    <script src="../../../public/js/jquery.js"></script>
+    <script src="/public/js/layer/layer.js"></script>
+    <script src="/public/pages/teacher/report-comment/decision-comment.js"></script>
+    <style>
+        .msg-block:last-of-type {
+            padding-top: 80px;
+            position: relative;
+        }
+
+        .content-name,
+        .content {
+            flex: 1;
+        }
+
+        .flexbox {
+            display: flex;
+        }
+
+        .black {
+            color: black;
+        }
+
+        .timeset input {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="window">
+        <div class="person-info">
+            <div class="window-tittle">
+                <span id="">加载中</span>鉴定表
+            </div>
+            <div class="content flexbox">
+                <div class="content-name">学院：<span id="" class="black">加载中</span></div>
+                <div class="content-name">专业：<span id="" class="black">加载中</span></div>
+            </div>
+            <div class="content flexbox">
+                <div class="content-name">姓名：<span id="" class="black">加载中</span></div>
+                <div class="content-name">学号：<span id="" class="black">加载中</span></div>
+            </div>
+            <div class="content flexbox">
+                <div class="content-name">实习单位：<span id="" class="black">加载中</span></div>
+                <div class="content-name">实习岗位：<span id="" class="black">加载中</span></div>
+                
+            </div>
+            <!-- <div class="content flexbox">
+                    <div class="content-name">实习日期：<span id="" class="black">2019/5/1</span>&nbsp;至&nbsp;<span id=""
+                            class="black">2019/8/1</span></div>
+            </div> -->
+
+            <div class="msg-block">
+                    <div class="title">鉴定表</div>
+                    <div class="content">
+                        <div class="content-name">实习内容</div>
+                        <div class="inner-content">
+                            加载中</div>
+                        <!-- <div class="time"><span class="time-text">时间</span><span class="time-inner">2019/10/24</span></div> -->
+                    </div>
+                    <div class="content">
+                        <div class="content-name">自我总结</div>
+                        <div class="inner-content">
+                            加载中</div>
+                        <!-- <div class="time"><span class="time-text">时间</span><span class="time-inner">2019/10/24</span></div> -->
+                    </div>
+            
+        </div>
+
+        </div>
+
+        <!-- <div class="internship-grade">
+            <div class="line-one flexbox">
+                <div class="content">
+                    <div class="content-name">实习单位指导教师成绩评语</div>
+                    <div class="inner-content">暂无评价</div>
+                    <div class="inner-content">成绩：<span></span></div>
+                    <div class="time"><span class="time-text">时间</span><span class="time-inner">2019/10/26</span></div>
+                </div>
+                <div class="content">
+                    <div class="content-name">实习单位审核意见</div>
+                    <div class="inner-content">暂无评价</div>
+                    <div class="time"><span class="time-text">时间</span><span class="time-inner"></span></div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="content-name">实习单位指导教师成绩评定</div>
+                <div class="inner-content">暂无评价</div>
+                <div class="time"><span class="time-text">时间</span><span class="time-inner">2019/10/26</span></div>
+            </div>
+
+        </div> -->
+        <div class="content">
+            <div class="content-name">实习单位指导教师评语及成绩评定</div>
+            <div class="inner-content">
+                <!-- <textarea name="corpTeacherOpinion" id="corpTeacherOpinion" cols="30" rows="10"></textarea> -->
+                <span id="corpTea-comment">加载中</span>
+            </div>
+            <div class="inner-content">实习成绩：<span>
+                    <select name="corpTeacherGrade" id="corpTeacherGrade" class="rep-garde-select">
+                        <option value="优秀">优秀</option>
+                        <option value="良好">良好</option>
+                        <option value="中等">中等</option>
+                        <option value="及格">及格</option>
+                        <option value="不及格">不及格</option>
+                    </select>
+                </span>
+            </div>
+            <div class="time">
+                <!-- 时间<input type="date" id="CTODate" name="CTODate"> -->
+                <span class="time-text">时间</span><span class="time-inner" id="CTODate">暂无</span>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content-name">实习单位审核意见</div>
+            <div class="inner-content">
+                <!-- <textarea name="corpOpinion" id="corpOpinion" cols="30" rows="10"></textarea> -->
+                <span id="corp-comment">加载中</span>
+            </div>
+            <div class="time">
+                <!-- 时间<input type="date" id="CODate" name="CODate"> -->
+                <span class="time-text">时间</span><span class="time-inner" id="CODate">加载中</span>
+            </div>
+        </div>
+
+        <div class="content">
+            <!-- <div class="content-name">所在学院指导老师成绩评定</div>
+            <div class="inner-content">
+                <textarea name="teacherGrade" id="teacherGrade" cols="30" rows="10"></textarea>
+            </div>
+            <div class="timeset">
+                时间<input type="date" id="TGDate" name="TGDate">
+            </div> -->
+            <div class="content-name">所在学院指导老师成绩评定</div>
+            <div class="inner-content">实习成绩：<span>
+                <select name="teacherGrade" id="teacherGrade" class="rep-garde-select">
+                    <option value="优秀">优秀</option>
+                    <option value="良好">良好</option>
+                    <option value="中等">中等</option>
+                    <option value="及格">及格</option>
+                    <option value="不及格">不及格</option>
+                </select>
+            </span>
+        </div>
+        <div class="timeset">
+            时间<input type="date" id="TGDate" name="TGDate">
+        </div>
+        </div>
+        <!-- <div class="content">
+            <div class="content-name">综合实习成绩评定</div>
+            <div class="inner-content">
+                <textarea name="comprehsvGrade" id="comprehsvGrade" cols="30" rows="10"></textarea>
+            </div>
+            <div class="timeset">
+                时间<input type="date" id="CGDate" name="CGDate">
+            </div>
+        </div> -->
+        <div class="content">
+            <div class="content-name">综合实习成绩评定</div>
+            <div class="inner-content" id="comprehsvGrade"></div>
+            <div class="time"><span class="time-text">时间</span><span class="time-inner" id="CGDate">暂无</span></div>
+        </div>
+
+
+        <div class="content">
+            <div class="content-name">所在学院实习领导小组意见</div>
+            <div class="inner-content">
+                <textarea name="collegePrincipalOpinion" id="collegePrincipalOpinion" cols="30" rows="10"></textarea>
+            </div>
+            <div class="timeset">
+                时间<input type="date" id="CPODate" name="CPODate">
+            </div>
+        </div>
+        
+        <div class="msg-block">
+            <button class="submit" type="button" id="">提交</button>
+            <button class="return" id="">返回</button>
+        </div>
+</body>
+<script>
+    $(function () {
+        $('.return').click(function () {
+            window.history.back();
+            return false
+        })
+    })
+</script>
+
+</html>
