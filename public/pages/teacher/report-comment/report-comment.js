@@ -1,6 +1,6 @@
 $(()=>{
     
-    layer.msg('如未提交，系统将不会保存所写内容，请及时备份。',{time:0})
+    layer.msg('如未提交，系统将不会保存所写内容，请您退出前及时备份。',{time:4000})
 
     let stuinfo = getLocalStorage("std-report-entity")
     console.log(stuinfo)
@@ -29,7 +29,7 @@ $(()=>{
 
 
             let msg = data.data
-            // console.log(msg)
+            console.log(msg)
             let template = `<div class="window-tittle">
             <span id="">${msg.name}</span>报告册
         </div>
@@ -47,7 +47,7 @@ $(()=>{
         </div>
         <div class="content flexbox">
             <div class="content-name">实习岗位：<span id="" class="black">${msg.corpPosition?msg.corpPosition:"暂无"}</span></div>
-            <div class="content-name">实习日期：<span id="" class="black">${msg.gmtStart}</span>&nbsp;至&nbsp;<span id=""class="black">${msg.gmtEnd}</span></div>
+            <div class="content-name">实习日期：<span id="" class="black">${stuinfo.gmtStart}</span>&nbsp;至&nbsp;<span id=""class="black">${stuinfo.gmtEnd}</span></div>
         </div>`
            
         let first = `<div class="title">第一阶段</div>

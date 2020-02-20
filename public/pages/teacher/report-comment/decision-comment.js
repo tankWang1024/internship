@@ -3,7 +3,7 @@ $(()=>{
     let stuinfo = getLocalStorage("std-decision-entity")
     let stuNo = stuinfo.stuNo
     // console.log(stuNo)
-    // console.log(stuinfo)
+    console.log(stuinfo)
 
     //第一次渲染学生信息
     $.ajax({
@@ -14,7 +14,7 @@ $(()=>{
             request.setRequestHeader("Authorization", sessionStorage.getItem("userinfo"));
         },
         success(data){
-            // console.log(data.data)
+            console.log(data.data)
             let person_info = data.data
             let template = `<div class="window-tittle">
             <span id="">${person_info.name}</span>鉴定表
@@ -59,13 +59,16 @@ $(()=>{
 
             //实习单位指导教师实习成绩时间
             // CTODate.value = stuinfo.ctodate?stuinfo.ctodate:null
-            $("#CTODate").text(stuinfo.ctodate?stuinfo.ctodate:"暂无");
+            // $("#CTODate").text(stuinfo.ctodate?stuinfo.ctodate:"暂无");
+            $("#CTODate").text(person_info.ctodate?person_info.ctodate:"暂无");
+
             //实习单位审核意见
             // corpOpinion.value = stuinfo.corpOpinion
             $("#corp-comment").text(stuinfo.corpOpinion?stuinfo.corpOpinion:"暂无");
             //实习单位审核意见时间
             // CODate.value = stuinfo.codate?stuinfo.codate:null
-            $("#CODate").text(stuinfo.codate?stuinfo.codate:"暂无")
+            // $("#CODate").text(stuinfo.codate?stuinfo.codate:"暂无")
+            $("#CODate").text(person_info.codate?person_info.codate:"暂无")
 
 
             //所在学院指导老师成绩评定
@@ -82,49 +85,67 @@ $(()=>{
 
 
             //综合实习成绩评定时间
-            CGDate.innerHTML = stuinfo.cgdate?stuinfo.cgdate:"暂无"
+            // CGDate.innerHTML = stuinfo.cgdate?stuinfo.cgdate:"暂无"
+            CGDate.innerHTML = person_info.cgdate?person_info.cgdate:"暂无"
             // CGDate.value = stuinfo.cgdate?stuinfo.cgdate:null
             //所在学院实习领导小组意见
-            collegePrincipalOpinion.value = stuinfo.collegePrincipalOpinion
+            // collegePrincipalOpinion.value = stuinfo.collegePrincipalOpinion
+            collegePrincipalOpinion.value = person_info.collegePrincipalOpinion
             //所在学院实习领导小组意见时间
-            CPODate.value = stuinfo.cpodate?stuinfo.cpodate:null
+            // CPODate.value = stuinfo.cpodate?stuinfo.cpodate:null
+            CPODate.value = person_info.cpodate?person_info.cpodate:null
         }
     })
 
     //提交
     $(".submit").on("click",function(){
         let options = {
-            stuNo:stuinfo.stuNo,
-
-            //-------没必要提交了-------------
-            // corpTeacherOpinion:corpTeacherOpinion.value,
-
-            corpTeacherGrade:corpTeacherGrade.value,
-            // CTODate:CTODate.value,
-            // corpOpinion:corpOpinion.value,
-            // CODate:CODate.value,
             teacherGrade:teacherGrade.value,
-            // TGDate:TGDate.value,
-            comprehsvGrade:comprehsvGrade.value,
-            // CGDate:CGDate.value,
 
-            // collegePrincipalOpinion:collegePrincipalOpinion.value,
+            CTGDate:stuinfo.cTGDate,
+            CTODate:CTODate.value,
 
-            // CPODate:CPODate.value,
-            id:stuinfo.id
+            
+            cTGDate:stuinfo.cTGDate,
+            cTODate:CTODate.value,
+
+                    collegePrincipalOpinion:collegePrincipalOpinion.value,
+                    comprehsvGrade:comprehsvGrade.value,
+                    corpOpinion:corpOpinion.value,
+                    corpTeacherGrade:corpTeacherGrade.value,
+                    corpTeacherOpinion:corpTeacherOpinion.value,
+
+                    corpTeacherScore:corpTeacherGrade.value,
+            gmtEnd:stuinfo.gmtEnd,
+            gmtStart:stuinfo.gmtStart,
+
+                    id:stuinfo.id,
+
+                    selfSummary:stuinfo.selfSummary,
+            
+                    stuNo:stuNo,
+
+                    sxContent:stuinfo.sxContent,
+
+
+            
         }
         // console.log(CTODate.value)
-        // if(CODate.value){
-        //     options.CODate = CODate.value
-        // }
+        if(CODate.value){
+            options.CODate = CODate.value
+            options.cODate = CODate.value
+        }
         if(TGDate.value){
             options.TGDate = TGDate.value
+            options.tGDate = TGDate.value
         }
         if(CGDate.value){
             options.CGDate = CGDate.value
+            options.cGDate = CGDate.value
         }
         if(CPODate.value){
             options.CPODate = CPODate.value
+            options.cPODate = CPODate.value
         }
         // console.log(options)
         $.ajax({

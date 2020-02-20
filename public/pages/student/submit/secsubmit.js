@@ -1,6 +1,6 @@
 window.onload = ()=>{
 
-    layer.msg('如未提交，系统将不会保存所写内容，请及时备份。',{time:0})
+    layer.msg('如未提交，系统将不会保存所写内容，请您退出前及时备份。',{time:4000})
     
     redirectTo(document.getElementsByClassName("list")[0].getElementsByTagName('li')[0],"/student/first")
     redirectTo(document.getElementsByClassName('item')[0],"/student");

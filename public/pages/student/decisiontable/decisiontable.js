@@ -41,9 +41,6 @@ $(()=>{
             time: 0 //不自动关闭
             , btn: ['提交', '取消']
             , yes: function (index) {
-                // 为了防止学生重复点击，加载出来之前关闭按钮
-                $("#decisionsubmit").text("提交中,请稍后...");
-                $("#decisionsubmit").attr("disabled","true");
                 let pra = practiceContent.value
                 let summary = selfSummary.value
                 if(pra.length>1200){
@@ -58,6 +55,9 @@ $(()=>{
                     layer.msg('实习自我总结要求不低于800字')
                     return
                 }
+                // 为了防止学生重复点击，加载出来之前关闭按钮
+                $("#decisionsubmit").text("提交中,请稍后...");
+                $("#decisionsubmit").attr("disabled","true");
                 $.ajax({
                     type:"post",
                     url:`${config.ip}:${config.port}/student/identify`,
