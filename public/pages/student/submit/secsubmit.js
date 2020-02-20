@@ -5,6 +5,7 @@ window.onload = ()=>{
     redirectTo(document.getElementsByClassName("list")[0].getElementsByTagName('li')[0],"/student/first")
     redirectTo(document.getElementsByClassName('item')[0],"/student");
     redirectTo(document.getElementsByClassName('item')[2],"/student-decision");
+    var gmtEnd = null;
     $.ajax({
             type:"get",
             url:`${config.ip}:${config.port}/student/reportForm`,
@@ -14,7 +15,8 @@ window.onload = ()=>{
             },
             success:(data)=>{
                 const msg = data.data
-                // console.log(msg)
+                console.log(msg)
+                gmtEnd = new Date(msg.gmtEnd)
                 if(msg.stage2GuideDate){
                     var firtime = msg.stage2GuideDate.split(' - ')[0]
                     var lasttime = msg.stage2GuideDate.split(' - ')[1]
@@ -108,6 +110,7 @@ window.onload = ()=>{
                                 url:`${config.ip}:${config.port}/student/report/stage2`,
                                 dataType:"json",
                                 data:{
+                                    gmtEnd:gmtEnd,
                                     stage2Date :stage2Date ,
                                     stage2GuideDate:stage2GuideDate,
                                     stage2Summary:stage2_summary,
