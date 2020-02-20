@@ -1,9 +1,9 @@
 $(()=>{
     
-    layer.msg('如未提交，系统将不会保存所写内容，请您退出前及时备份。',{time:4000})
+    layer.msg('如未提交，系统将不会保存所写内容，请您在退出前及时备份。',{time:4000})
 
     let stuinfo = getLocalStorage("std-report-entity")
-    console.log(stuinfo)
+    // console.log(stuinfo)
     let stuNo = stuinfo.stuNo
     // console.log(stuNo)
     $.ajax({
@@ -26,10 +26,8 @@ $(()=>{
             let stage1GradeDate = document.getElementById("stage1GradeDate")
             let stage2GradeDate = document.getElementById("stage2GradeDate")
 
-
-
             let msg = data.data
-            console.log(msg)
+            // console.log(msg)
             let template = `<div class="window-tittle">
             <span id="">${msg.name}</span>报告册
         </div>

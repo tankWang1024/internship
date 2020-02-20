@@ -1,6 +1,6 @@
 window.onload = ()=>{
 
-    layer.msg('如未提交，系统将不会保存所写内容，请您退出前及时备份。',{time:4000})
+    layer.msg('如未提交，系统将不会保存所写内容，请您在退出前及时备份。',{time:4000})
     
     redirectTo(document.getElementsByClassName("list")[0].getElementsByTagName('li')[1],"/student/twice")
     redirectTo(document.getElementsByClassName('item')[0],"/student");
@@ -13,7 +13,6 @@ window.onload = ()=>{
                 request.setRequestHeader("Authorization", sessionStorage.getItem("userinfo"));
             },
             success:(data)=>{
-                // console.log(data)
                 const msg = data.data
                 // console.log(msg)
                 if(msg.stage1GuideDate){
@@ -24,9 +23,17 @@ window.onload = ()=>{
                 firtimeinput.value = firtime?firtime:""
                 lasttimeinput.value = lasttime?lasttime:""
 
-                var dateStart = new Date(msg.stage1Date)
-                starttime.value = dateStart.getFullYear()+'-'+('0'+(dateStart.getMonth()+1)).slice(-2) + ('0'+dateStart.getDate()).slice(2)
-
+                var dateStart = null;
+                if(msg.stage1Date){
+                    dateStart= new Date(msg.stage1Date)
+                }else{//第一次填
+                    dateStart = new Date()
+                }
+                // console.log(dateStart);
+                let yearStart = dateStart.getFullYear()
+                let monthStart =('0'+(dateStart.getMonth()+1)).slice(-2)
+                let dayStart = ('0'+dateStart.getDate()).slice(-2)
+                starttime.value = yearStart+'-'+monthStart+'-'+dayStart
                 method.value = msg.stage1GuideWay
                 summary.value = msg.stage1Summary
 
@@ -99,7 +106,6 @@ window.onload = ()=>{
                                 dataType:"json",
                                 data:{
                                     stage1Date:stage1Date,
-                                    //stage1GuideDate:gmtStart,
                                     stage1Summary:stage1Summary,
                                     stage1GuideDate:stage1GuideDate,
                                     stage1GuideWay:stage1GuideWay

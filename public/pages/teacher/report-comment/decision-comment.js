@@ -2,8 +2,7 @@ $(()=>{
     //访问学生信息
     let stuinfo = getLocalStorage("std-decision-entity")
     let stuNo = stuinfo.stuNo
-    // console.log(stuNo)
-    console.log(stuinfo)
+    // console.log(stuinfo)
 
     //第一次渲染学生信息
     $.ajax({
@@ -14,7 +13,7 @@ $(()=>{
             request.setRequestHeader("Authorization", sessionStorage.getItem("userinfo"));
         },
         success(data){
-            console.log(data.data)
+            // console.log(data.data)
             let person_info = data.data
             let template = `<div class="window-tittle">
             <span id="">${person_info.name}</span>鉴定表
@@ -52,7 +51,6 @@ $(()=>{
             // console.log(temp_time)
             // console.log(stuinfo)
             //实习单位指导教师评语
-            // corpTeacherOpinion.value = stuinfo.corpTeacherOpinion
             $('#corpTea-comment').text(stuinfo.corpTeacherOpinion?stuinfo.corpTeacherOpinion:"暂无");
             //实习单位指导教师实习成绩
             corpTeacherGrade.value = stuinfo.corpTeacherGrade?stuinfo.corpTeacherGrade:"优秀"
@@ -87,48 +85,35 @@ $(()=>{
             //综合实习成绩评定时间
             // CGDate.innerHTML = stuinfo.cgdate?stuinfo.cgdate:"暂无"
             CGDate.innerHTML = person_info.cgdate?person_info.cgdate:"暂无"
+            
             // CGDate.value = stuinfo.cgdate?stuinfo.cgdate:null
             //所在学院实习领导小组意见
-            // collegePrincipalOpinion.value = stuinfo.collegePrincipalOpinion
-            collegePrincipalOpinion.value = person_info.collegePrincipalOpinion
+            collegePrincipalOpinion.value = stuinfo.collegePrincipalOpinion
             //所在学院实习领导小组意见时间
-            // CPODate.value = stuinfo.cpodate?stuinfo.cpodate:null
-            CPODate.value = person_info.cpodate?person_info.cpodate:null
+            CPODate.value = stuinfo.cpodate?stuinfo.cpodate:null
         }
     })
 
     //提交
     $(".submit").on("click",function(){
         let options = {
+            // CTGDate:new Date(stuinfo.cTGDate),
+            // CTODate:new Date(CTODate.value),
+            // cTGDate:new Date(stuinfo.cTGDate),
+            // cTODate:new Date(CTODate.value),
+            collegePrincipalOpinion:collegePrincipalOpinion.value,
             teacherGrade:teacherGrade.value,
-
-            CTGDate:stuinfo.cTGDate,
-            CTODate:CTODate.value,
-
-            
-            cTGDate:stuinfo.cTGDate,
-            cTODate:CTODate.value,
-
-                    collegePrincipalOpinion:collegePrincipalOpinion.value,
-                    comprehsvGrade:comprehsvGrade.value,
-                    corpOpinion:corpOpinion.value,
-                    corpTeacherGrade:corpTeacherGrade.value,
-                    corpTeacherOpinion:corpTeacherOpinion.value,
-
-                    corpTeacherScore:corpTeacherGrade.value,
-            gmtEnd:stuinfo.gmtEnd,
-            gmtStart:stuinfo.gmtStart,
-
-                    id:stuinfo.id,
-
-                    selfSummary:stuinfo.selfSummary,
-            
-                    stuNo:stuNo,
-
-                    sxContent:stuinfo.sxContent,
-
-
-            
+            corpTeacherGrade:corpTeacherGrade.value,
+            // comprehsvGrade:comprehsvGrade.value,
+            // corpOpinion:stuinfo.corpOpinion,
+            // corpTeacherOpinion:stuinfo.corpTeacherOpinion,
+            // corpTeacherScore:corpTeacherGrade.value,
+            // gmtEnd:new Date(stuinfo.gmtEnd),
+            // gmtStart:new Date(stuinfo.gmtStart),
+            id:stuinfo.id,
+            // selfSummary:stuinfo.selfSummary,
+            stuNo:stuNo,
+            // sxContent:stuinfo.sxContent,
         }
         // console.log(CTODate.value)
         if(CODate.value){
@@ -143,10 +128,12 @@ $(()=>{
             options.CGDate = CGDate.value
             options.cGDate = CGDate.value
         }
+
         if(CPODate.value){
-            options.CPODate = CPODate.value
-            options.cPODate = CPODate.value
+            options.CPODate =CPODate.value
+            options.cPODate =CPODate.value
         }
+        
         // console.log(options)
         $.ajax({
             type:"POST",

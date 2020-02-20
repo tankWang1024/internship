@@ -1,11 +1,10 @@
 window.onload = ()=>{
 
-    layer.msg('如未提交，系统将不会保存所写内容，请您退出前及时备份。',{time:4000})
+    layer.msg('如未提交，系统将不会保存所写内容，请您在退出前及时备份。',{time:4000})
     
     redirectTo(document.getElementsByClassName("list")[0].getElementsByTagName('li')[0],"/student/first")
     redirectTo(document.getElementsByClassName('item')[0],"/student");
     redirectTo(document.getElementsByClassName('item')[2],"/student-decision");
-
     $.ajax({
             type:"get",
             url:`${config.ip}:${config.port}/student/reportForm`,
@@ -24,8 +23,17 @@ window.onload = ()=>{
                 firtimeinput.value = firtime?firtime:""
                 lasttimeinput.value = lasttime?lasttime:""
 
-                var dateStart = new Date(msg.stage1Date)
-                starttime.value = dateStart.getFullYear()+'-'+('0'+(dateStart.getMonth()+1)).slice(-2) + ('0'+dateStart.getDate()).slice(2)
+                var dateStart = null;
+                if(msg.stage2Date){
+                    dateStart= new Date(msg.stage2Date)
+                }else{//第一次填
+                    dateStart = new Date()
+                }
+                // console.log(dateStart);
+                let yearStart = dateStart.getFullYear()
+                let monthStart =('0'+(dateStart.getMonth()+1)).slice(-2)
+                let dayStart = ('0'+dateStart.getDate()).slice(-2)
+                starttime.value = yearStart+'-'+monthStart+'-'+dayStart
 
                 method.value = msg.stage2GuideWay
                 summary.value = msg.stage2Summary
@@ -79,7 +87,6 @@ window.onload = ()=>{
                             let stage2_summary = summary.value
                             let stage2Date   = starttime.value ;
                             let stage2GuideWay  = method.value ;
-                            // let gmtStart =
                             let stage2GuideDate = firtimeinput.value+" - "+lasttimeinput.value;
                             // console.log(summary.value.length)
                             if(summary.value.length>1050){
