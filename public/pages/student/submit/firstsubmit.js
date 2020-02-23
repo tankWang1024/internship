@@ -84,7 +84,7 @@ window.onload = ()=>{
                             }
                             let stage1Summary = summary.value
                             let stage1Date  = starttime.value ;
-                            console.log(typeof stage1Date)
+                            // console.log(typeof stage1Date)
                             let stage1GuideWay  = method.value ;
                             // console.log(gmtStart)
                             let stage1GuideDate = firtimeinput.value+" - "+lasttimeinput.value;
