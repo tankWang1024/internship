@@ -49,7 +49,6 @@ window.onload = ()=>{
     })
 
     $('#summary').on("input",()=>{
-        // console.log(111)
         $('.summary-num').html($('#summary').get(0).value.length)
         // $(this).find('.summary-num').html($(this).siblings().get(1).value.length)
     })
