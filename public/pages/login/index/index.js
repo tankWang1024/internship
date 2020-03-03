@@ -1,4 +1,6 @@
 $(function(){
+    console.log(111);
+    
     getNotifies();
     document.onselectstart = function(){return false}
     var radio = document.getElementsByName("identity")
@@ -167,7 +169,7 @@ function checkIfFirstLogin(){
         dataType:"json",
         success:function(data){
             // 请求成功时
-            console.log(data);
+            // console.log(data);
             if(data.status === 1){
                 var rs = JSON.parse(data.data);
                 if(rs.isFirstLogin === true){
