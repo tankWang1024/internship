@@ -142,10 +142,11 @@ $(() => {
         ajaxByPost('/student/student/position', {
             position: position.value
         }, function (data) {
-            layer.msg("绑定成功,请重新登录后查看");
+            layer.msg("绑定成功");
             setTimeout(()=>{
                 sessionStorage.setItem("userInfo","");
-                window.location.href="/logout"
+                // window.location.href="/logout"
+                window.location.reload(true)
             },1000)
 
         })
