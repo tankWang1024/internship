@@ -1,6 +1,4 @@
 $(function(){
-    console.log(111);
-    
     getNotifies();
     document.onselectstart = function(){return false}
     var radio = document.getElementsByName("identity")
