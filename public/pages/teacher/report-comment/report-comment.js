@@ -187,7 +187,7 @@ $(()=>{
             layer.msg('一阶段评语不能低于60字')
             return;
         }
-        if(stage2Comment.value.length<60){
+        if(stage2Comment.value.length!=0 && stage2Comment.value.length<60){
             layer.msg('二阶段评语不能低于60字')
             return;
         }
@@ -253,7 +253,6 @@ $(()=>{
         // if(stage2GradeDate.value){
         //     options.stage2GradeDate = stage2GradeDate.value
         // }
-
         $.ajax({
             type:"POST",
             url:`${config.ip}:${config.port}/teacher/student/reportForm`,
