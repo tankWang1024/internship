@@ -191,7 +191,7 @@ $(()=>{
             layer.msg('二阶段评语不能低于60字')
             return;
         }
-        if(totalGrade.value.length<60){
+        if(totalGrade.value.length!=0 && totalGrade.value.length<60){
             layer.msg('总评不能低于60字')
             return;
         }
