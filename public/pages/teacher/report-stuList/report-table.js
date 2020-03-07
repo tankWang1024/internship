@@ -319,7 +319,7 @@ $(() => {
         
                         <td class=${item.reportFlag===2?"checked":item.reportFlag===0?"unchecked":"checking"}>
                             
-                        <span class="iconfont ${item.reportFlag===0?"icon-cuo2":item.reportFlag===1?"icon-cuo2":"icon-dui3"}"></span>${item.reportFlag===0?"还未评价!":item.reportFlag===1?"未评价完":"已评价"}
+                        <span class="iconfont ${item.reportFlag===0?"icon-cuo2":item.reportFlag===1?"icon-cuo2":"icon-circle"}"></span>${item.reportFlag===0?"还未评价!":item.reportFlag===1?"未评价完":"已评价"}
                     </td>
                         <td class="align-center">
                             <button class="check ${item.reportFilledFlag===1||item.reportFilledFlag===0?"uncheck-btn":"check-report"}" data-id="${item.stuNo}">评价</button>
