@@ -13,6 +13,8 @@ $(() => {
         },
         success(data) {
             students = data.data
+            console.log(students);
+            
             if (!students) {
                 $('.stuList-wrap').append(`<div class="showtoast">暂无学生信息!</div>`)
                 return
@@ -41,17 +43,17 @@ $(() => {
                     </div>
                 </td>
                 
-            <td class=${item.reportFilledFlag===3?"checked":item.reportFilledFlag===2?"checking":"unchecked"}>
+            <td class=${item.reportFilledFlag===2?"checked":item.reportFilledFlag===1?"checking":"unchecked"}>
                     
-            <span class="iconfont ${item.reportFilledFlag===3?"icon-dui3":item.reportFilledFlag===2?"icon-circle":"icon-cuo2"}"></span>${item.reportFilledFlag===3?"已填写完":item.reportFilledFlag===2?"一阶段已填":"未填写!"}
+            <span class="iconfont ${item.reportFilledFlag===2?"icon-dui3":item.reportFilledFlag===1?"icon-circle":"icon-cuo2"}"></span>${item.reportFilledFlag===2?"已填写完":item.reportFilledFlag===1?"一阶段已填":"未填写!"}
         </td>
 
             <td class=${item.reportFlag===2?"checked":item.reportFlag===0?"unchecked":"checking"}>
                     
-            <span class="iconfont ${item.reportFlag===0?"icon-cuo2":item.reportFlag===1?"icon-cuo2":"icon-dui3"}"></span>${item.reportFlag===0?"还未评价!":item.reportFlag===1?"未评价完":"已评价"}
+            <span class="iconfont ${item.reportFlag===0?"icon-cuo2":item.reportFlag===1?"icon-circle":"icon-dui3"}"></span>${item.reportFlag===0?"还未评价!":item.reportFlag===1?"未评价完":"已评价"}
         </td>
             <td class="align-center">
-                <button class="check ${item.reportFilledFlag===1||item.reportFilledFlag===0?"uncheck-btn":"check-report"}" data-id="${item.stuNo}">评价</button>
+                <button class="check ${item.reportFilledFlag===0?"uncheck-btn":"check-report"}" data-id="${item.stuNo}">评价</button>
             </td>
         </tr>`
                 template += std
@@ -102,19 +104,19 @@ $(() => {
                     </div>
                 </td>
 
-                <td class=${item.reportFilledFlag===3?"checked":item.reportFilledFlag===2?"checking":"unchecked"}>
+                <td class=${item.reportFilledFlag===2?"checked":item.reportFilledFlag===1?"checking":"unchecked"}>
                     
-                <span class="iconfont ${item.reportFilledFlag===3?"icon-dui3":item.reportFilledFlag===2?"icon-circle":"icon-cuo2"}"></span>${item.reportFilledFlag===3?"已填写完":item.reportFilledFlag===2?"一阶段已填":"未填写!"}
+            <span class="iconfont ${item.reportFilledFlag===2?"icon-dui3":item.reportFilledFlag===1?"icon-circle":"icon-cuo2"}"></span>${item.reportFilledFlag===2?"已填写完":item.reportFilledFlag===1?"一阶段已填":"未填写!"}
         </td>
 
-                <td class=${item.reportFlag===2?"checked":item.reportFlag===0?"unchecked":"checking"}>
+            <td class=${item.reportFlag===2?"checked":item.reportFlag===0?"unchecked":"checking"}>
                     
-                <span class="iconfont ${item.reportFlag===0?"icon-cuo2":item.reportFlag===1?"icon-cuo2":"icon-dui3"}"></span>${item.reportFlag===0?"还未评价!":item.reportFlag===1?"未评价完":"已评价"}
+            <span class="iconfont ${item.reportFlag===0?"icon-cuo2":item.reportFlag===1?"icon-circle":"icon-dui3"}"></span>${item.reportFlag===0?"还未评价!":item.reportFlag===1?"未评价完":"已评价"}
+        </td>
+            <td class="align-center">
+                <button class="check ${item.reportFilledFlag===0?"uncheck-btn":"check-report"}" data-id="${item.stuNo}">评价</button>
             </td>
-                <td class="align-center">
-                    <button class="check ${item.reportFilledFlag===1||item.reportFilledFlag===0?"uncheck-btn":"check-report"}" data-id="${item.stuNo}">评价</button>
-                </td>
-            </tr>`
+        </tr>`
                 template += std
             }
             // console.log()
@@ -174,19 +176,19 @@ $(() => {
                         TEL:${item.phone?item.phone:"暂无"}
                     </div>
                 </td>
-                <td class=${item.reportFilledFlag===3?"checked":item.reportFilledFlag===2?"checking":"unchecked"}>
+                <td class=${item.reportFilledFlag===2?"checked":item.reportFilledFlag===1?"checking":"unchecked"}>
                     
-                <span class="iconfont ${item.reportFilledFlag===3?"icon-dui3":item.reportFilledFlag===2?"icon-circle":"icon-cuo2"}"></span>${item.reportFilledFlag===3?"已填写完":item.reportFilledFlag===2?"一阶段已填":"未填写!"}
+            <span class="iconfont ${item.reportFilledFlag===2?"icon-dui3":item.reportFilledFlag===1?"icon-circle":"icon-cuo2"}"></span>${item.reportFilledFlag===2?"已填写完":item.reportFilledFlag===1?"一阶段已填":"未填写!"}
         </td>
-                
+
             <td class=${item.reportFlag===2?"checked":item.reportFlag===0?"unchecked":"checking"}>
                     
-                <span class="iconfont ${item.reportFlag===0?"icon-cuo2":item.reportFlag===1?"icon-cuo2":"icon-dui3"}"></span>${item.reportFlag===0?"还未评价!":item.reportFlag===1?"未评价完":"已评价"}
+            <span class="iconfont ${item.reportFlag===0?"icon-cuo2":item.reportFlag===1?"icon-circle":"icon-dui3"}"></span>${item.reportFlag===0?"还未评价!":item.reportFlag===1?"未评价完":"已评价"}
+        </td>
+            <td class="align-center">
+                <button class="check ${item.reportFilledFlag===0?"uncheck-btn":"check-report"}" data-id="${item.stuNo}">评价</button>
             </td>
-                <td class="align-center">
-                    <button class="check ${item.reportFilledFlag===1||item.reportFilledFlag===0?"uncheck-btn":"check-report"}" data-id="${item.stuNo}">评价</button>
-                </td>
-            </tr>`
+        </tr>`
                 template += std
             }
             $('tbody').html(template)
@@ -229,24 +231,24 @@ $(() => {
                     </div>
                 </td>
 
-                <td class=${item.reportFilledFlag===3?"checked":item.reportFilledFlag===2?"checking":"unchecked"}>
+                <td class=${item.reportFilledFlag===2?"checked":item.reportFilledFlag===1?"checking":"unchecked"}>
                     
-                <span class="iconfont ${item.reportFilledFlag===3?"icon-dui3":item.reportFilledFlag===2?"icon-circle":"icon-cuo2"}"></span>${item.reportFilledFlag===3?"已填写完":item.reportFilledFlag===2?"一阶段已填":"未填写!"}
+            <span class="iconfont ${item.reportFilledFlag===2?"icon-dui3":item.reportFilledFlag===1?"icon-circle":"icon-cuo2"}"></span>${item.reportFilledFlag===2?"已填写完":item.reportFilledFlag===1?"一阶段已填":"未填写!"}
         </td>
 
-                <td class=${item.reportFlag===2?"checked":item.reportFlag===0?"unchecked":"checking"}>
+            <td class=${item.reportFlag===2?"checked":item.reportFlag===0?"unchecked":"checking"}>
                     
-                <span class="iconfont ${item.reportFlag===0?"icon-cuo2":item.reportFlag===1?"icon-cuo2":"icon-dui3"}"></span>${item.reportFlag===0?"还未评价!":item.reportFlag===1?"未评价完":"已评价"}
+            <span class="iconfont ${item.reportFlag===0?"icon-cuo2":item.reportFlag===1?"icon-circle":"icon-dui3"}"></span>${item.reportFlag===0?"还未评价!":item.reportFlag===1?"未评价完":"已评价"}
+        </td>
+            <td class="align-center">
+                <button class="check ${item.reportFilledFlag===0?"uncheck-btn":"check-report"}" data-id="${item.stuNo}">评价</button>
             </td>
-                <td class="align-center">
-                    <button class="check ${item.reportFilledFlag===1||item.reportFilledFlag===0?"uncheck-btn":"check-report"}" data-id="${item.stuNo}">评价</button>
-                </td>
-            </tr>`
+        </tr>`
                 template += std
             }
         } else if (number === 1) { //已填完
             for (let item of students) {
-                if (item.reportFilledFlag === 3) {
+                if (item.reportFilledFlag === 2) {
                     let std = `<tr class="stuList-row">
                     <td>
                         ${item.stuNo}
@@ -269,19 +271,19 @@ $(() => {
                         </div>
                     </td>
     
-                    <td class=${item.reportFilledFlag===3?"checked":item.reportFilledFlag===2?"checking":"unchecked"}>
-                        
-                    <span class="iconfont ${item.reportFilledFlag===3?"icon-dui3":item.reportFilledFlag===2?"icon-circle":"icon-cuo2"}"></span>${item.reportFilledFlag===3?"已填写完":item.reportFilledFlag===2?"一阶段已填":"未填写!"}
+                    <td class=${item.reportFilledFlag===2?"checked":item.reportFilledFlag===1?"checking":"unchecked"}>
+                    
+            <span class="iconfont ${item.reportFilledFlag===2?"icon-dui3":item.reportFilledFlag===1?"icon-circle":"icon-cuo2"}"></span>${item.reportFilledFlag===2?"已填写完":item.reportFilledFlag===1?"一阶段已填":"未填写!"}
+        </td>
+
+            <td class=${item.reportFlag===2?"checked":item.reportFlag===0?"unchecked":"checking"}>
+                    
+            <span class="iconfont ${item.reportFlag===0?"icon-cuo2":item.reportFlag===1?"icon-circle":"icon-dui3"}"></span>${item.reportFlag===0?"还未评价!":item.reportFlag===1?"未评价完":"已评价"}
+        </td>
+            <td class="align-center">
+                <button class="check ${item.reportFilledFlag===0?"uncheck-btn":"check-report"}" data-id="${item.stuNo}">评价</button>
             </td>
-    
-                    <td class=${item.reportFlag===2?"checked":item.reportFlag===0?"unchecked":"checking"}>
-                        
-                    <span class="iconfont ${item.reportFlag===0?"icon-cuo2":item.reportFlag===1?"icon-cuo2":"icon-dui3"}"></span>${item.reportFlag===0?"还未评价!":item.reportFlag===1?"未评价完":"已评价"}
-                </td>
-                    <td class="align-center">
-                        <button class="check ${item.reportFilledFlag===1||item.reportFilledFlag===0?"uncheck-btn":"check-report"}" data-id="${item.stuNo}">评价</button>
-                    </td>
-                </tr>`
+        </tr>`
                     template += std
                 }
 
@@ -289,7 +291,7 @@ $(() => {
 
         } else if (number === 2) { //未填写
             for (let item of students) {
-                if (item.reportFilledFlag === 0 || item.reportFilledFlag === 1) {
+                if (item.reportFilledFlag === 0) {
                     let std = `<tr class="stuList-row">
                         <td>
                             ${item.stuNo}
@@ -312,19 +314,19 @@ $(() => {
                             </div>
                         </td>
         
-                        <td class=${item.reportFilledFlag===3?"checked":item.reportFilledFlag===2?"checking":"unchecked"}>
-                            
-                        <span class="iconfont ${item.reportFilledFlag===3?"icon-dui3":item.reportFilledFlag===2?"icon-circle":"icon-cuo2"}"></span>${item.reportFilledFlag===3?"已填写完":item.reportFilledFlag===2?"一阶段已填":"未填写!"}
-                </td>
-        
-                        <td class=${item.reportFlag===2?"checked":item.reportFlag===0?"unchecked":"checking"}>
-                            
-                        <span class="iconfont ${item.reportFlag===0?"icon-cuo2":item.reportFlag===1?"icon-cuo2":"icon-circle"}"></span>${item.reportFlag===0?"还未评价!":item.reportFlag===1?"未评价完":"已评价"}
-                    </td>
-                        <td class="align-center">
-                            <button class="check ${item.reportFilledFlag===1||item.reportFilledFlag===0?"uncheck-btn":"check-report"}" data-id="${item.stuNo}">评价</button>
-                        </td>
-                    </tr>`
+                        <td class=${item.reportFilledFlag===2?"checked":item.reportFilledFlag===1?"checking":"unchecked"}>
+                    
+            <span class="iconfont ${item.reportFilledFlag===2?"icon-dui3":item.reportFilledFlag===1?"icon-circle":"icon-cuo2"}"></span>${item.reportFilledFlag===2?"已填写完":item.reportFilledFlag===1?"一阶段已填":"未填写!"}
+        </td>
+
+            <td class=${item.reportFlag===2?"checked":item.reportFlag===0?"unchecked":"checking"}>
+                    
+            <span class="iconfont ${item.reportFlag===0?"icon-cuo2":item.reportFlag===1?"icon-circle":"icon-dui3"}"></span>${item.reportFlag===0?"还未评价!":item.reportFlag===1?"未评价完":"已评价"}
+        </td>
+            <td class="align-center">
+                <button class="check ${item.reportFilledFlag===0?"uncheck-btn":"check-report"}" data-id="${item.stuNo}">评价</button>
+            </td>
+        </tr>`
                     template += std
                 }
             }
