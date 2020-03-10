@@ -13,8 +13,6 @@ $(() => {
         },
         success(data) {
             students = data.data
-            console.log(students);
-            
             if (!students) {
                 $('.stuList-wrap').append(`<div class="showtoast">暂无学生信息!</div>`)
                 return

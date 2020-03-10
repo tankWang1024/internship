@@ -54,10 +54,10 @@ $(() => {
                     </div>
                 </td>
                 <td class="align-center">
-                        <button class="check ${item.reportFilledFlag===1||item.reportFilledFlag===0?"uncheck-btn":"check-report"}" data-id="${item.stuNo}">评价</button>
+                        <button class="check ${item.reportFilledFlag===0?"uncheck-btn":"check-report"}" data-id="${item.stuNo}">评价</button>
                     </td>
                     <td class="align-center">
-                        <button class="check ${item.identifyFilledFlag===1||item.identifyFilledFlag===0?"uncheck-btn":"check-decision"}" data-id="${item.stuNo}">评价</button>
+                        <button class="check ${item.identifyFilledFlag===0?"uncheck-btn":"check-decision"}" data-id="${item.stuNo}">评价</button>
                     </td>
             </tr>`
                 listDom += template
@@ -154,10 +154,10 @@ $(() => {
                     </div>
                 </td>
                 <td class="align-center">
-                        <button class="check ${item.reportFilledFlag===1||item.reportFilledFlag===0?"uncheck-btn":"check-report"}" data-id="${item.stuNo}">评价</button>
+                        <button class="check ${item.reportFilledFlag===0?"uncheck-btn":"check-report"}" data-id="${item.stuNo}">评价</button>
                     </td>
                     <td class="align-center">
-                        <button class="check ${item.identifyFilledFlag===1||item.identifyFilledFlag===0?"uncheck-btn":"check-decision"}" data-id="${item.stuNo}">评价</button>
+                        <button class="check ${item.identifyFilledFlag===0?"uncheck-btn":"check-decision"}" data-id="${item.stuNo}">评价</button>
                     </td>
             </tr>`
                 listDom += template
@@ -227,10 +227,10 @@ $(() => {
                         </div>
                     </td>
                     <td class="align-center">
-                        <button class="check ${item.reportFilledFlag===1||item.reportFilledFlag===0?"uncheck-btn":"check-report"}" data-id="${item.stuNo}">评价</button>
+                        <button class="check ${item.reportFilledFlag===0?"uncheck-btn":"check-report"}" data-id="${item.stuNo}">评价</button>
                     </td>
                     <td class="align-center">
-                        <button class="check ${item.identifyFilledFlag===1||item.identifyFilledFlag===0?"uncheck-btn":"check-decision"}" data-id="${item.stuNo}">评价</button>
+                        <button class="check ${item.identifyFilledFlag===0?"uncheck-btn":"check-decision"}" data-id="${item.stuNo}">评价</button>
                     </td>
                 </tr>`
                 listDom += template
@@ -284,17 +284,17 @@ $(() => {
                     </div>
                 </td>
                 <td class="align-center">
-                        <button class="check ${item.reportFilledFlag===1||item.reportFilledFlag===0?"uncheck-btn":"check-report"}" data-id="${item.stuNo}">评价</button>
+                        <button class="check ${item.reportFilledFlag===0?"uncheck-btn":"check-report"}" data-id="${item.stuNo}">评价</button>
                     </td>
                     <td class="align-center">
-                        <button class="check ${item.identifyFilledFlag===1||item.identifyFilledFlag===0?"uncheck-btn":"check-decision"}" data-id="${item.stuNo}">评价</button>
+                        <button class="check ${item.identifyFilledFlag===0?"uncheck-btn":"check-decision"}" data-id="${item.stuNo}">评价</button>
                     </td>
             </tr>`
                 listDom += template
             }
         } else if (number === 1) { //已填完
             for (let item of stdList) {
-                if (item.reportFilledFlag === 3 & item.identifyFilledFlag === 3) {
+                if (item.reportFilledFlag === 2 & item.identifyFilledFlag === 2) {
                     let template = `<tr class="stuList-row">
                 <td class="align-center">${item.stuNo}</td>
                 <td class="align-center">${item.name}</td>
@@ -325,10 +325,10 @@ $(() => {
                     </div>
                 </td>
                 <td class="align-center">
-                        <button class="check ${item.reportFilledFlag===1||item.reportFilledFlag===0?"uncheck-btn":"check-report"}" data-id="${item.stuNo}">评价</button>
+                        <button class="check ${item.reportFilledFlag===0?"uncheck-btn":"check-report"}" data-id="${item.stuNo}">评价</button>
                     </td>
                     <td class="align-center">
-                        <button class="check ${item.identifyFilledFlag===1||item.identifyFilledFlag===0?"uncheck-btn":"check-decision"}" data-id="${item.stuNo}">评价</button>
+                        <button class="check ${item.identifyFilledFlag===0?"uncheck-btn":"check-decision"}" data-id="${item.stuNo}">评价</button>
                     </td>
             </tr>`
                     listDom += template
@@ -337,7 +337,7 @@ $(() => {
 
         } else if (number === 2) { //未填写
             for (let item of stdList) {
-                if ((item.reportFilledFlag === 0 || item.reportFilledFlag === 1) & (item.identifyFilledFlag === 0 || item.identifyFilledFlag === 1)) {
+                if ((item.reportFilledFlag === 0) & (item.identifyFilledFlag === 0)) {
                     let template = `<tr class="stuList-row">
                 <td class="align-center">${item.stuNo}</td>
                 <td class="align-center">${item.name}</td>
@@ -368,10 +368,10 @@ $(() => {
                     </div>
                 </td>
                 <td class="align-center">
-                        <button class="check ${item.reportFilledFlag===1||item.reportFilledFlag===0?"uncheck-btn":"check-report"}" data-id="${item.stuNo}">评价</button>
+                        <button class="check ${item.reportFilledFlag===0?"uncheck-btn":"check-report"}" data-id="${item.stuNo}">评价</button>
                     </td>
                     <td class="align-center">
-                        <button class="check ${item.identifyFilledFlag===1||item.identifyFilledFlag===0?"uncheck-btn":"check-decision"}" data-id="${item.stuNo}">评价</button>
+                        <button class="check ${item.identifyFilledFlag===0?"uncheck-btn":"check-decision"}" data-id="${item.stuNo}">评价</button>
                     </td>
             </tr>`
                     listDom += template
