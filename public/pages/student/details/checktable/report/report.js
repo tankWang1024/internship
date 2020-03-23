@@ -1,15 +1,15 @@
-$(()=>{
-    $.ajax({
-        type:"get",
-        url:`${config.ip}:${config.port}/student/reportForm`,
-        dataType:"json",
-        beforeSend: function(request) {
-            request.setRequestHeader("Authorization", sessionStorage.getItem("userinfo"));
-        },
-        success:(data)=>{
-            // console.log(data.data)
-            let msg = data.data
-            let template = `<div class="msg-block">
+$(() => {
+  $.ajax({
+    type: "get",
+    url: `${config.ip}:${config.port}/student/reportForm`,
+    dataType: "json",
+    beforeSend: function (request) {
+      request.setRequestHeader("Authorization", sessionStorage.getItem("userinfo"));
+    },
+    success: (data) => {
+      // console.log(data.data)
+      let msg = data.data
+      let template = `<div class="msg-block">
             <div class="title">第一阶段报告册</div>
             <div class="text"><span class="name">指导时间</span><span class="text-inner">${msg.stage1GuideDate?msg.stage1GuideDate:"暂无"}</span></div>
             <div class="text"><span class="name">指导方式</span><span class="text-inner">${msg.stage1GuideWay?msg.stage1GuideWay:"暂无内容"}</span></div>
@@ -59,38 +59,42 @@ $(()=>{
             </div>
             <div class="text"><span class="name">实习成绩</span><span class="text-inner">${msg.totalScore?msg.totalScore:"暂无评价"}</span></div>
         </div>`
-        $('.window').html(template)
-        },
-        error:(err)=>{
-            alert("服务器繁忙,请稍后重试")
-        }
+      $('.window').html(template)
+    },
+    error: (err) => {
+      alert("服务器繁忙,请稍后重试")
+    }
+  })
+
+  $(".download-btn").on("click", () => {
+    layer.msg('服务器正在生成pdf页面，请勿退出，耐心等待....', {
+      time: 99999
     })
+    $(".download-btn")[0].disabled = 'disabled'
+    console.log('点点点');
+    $.ajax({
+      type: "get",
+      url: `${config.ip}:${config.port}/student/report/form`,
+      dataType: "json",
+      beforeSend: function (request) {
+        request.setRequestHeader("Authorization", sessionStorage.getItem("userinfo"));
+      },
+      success(data) {
+        let msg = data.data
+        let url = `${config.ip}:${config.port}/` + msg
+        window.location.href = url
+        // console.log(url)
 
-    $(".download-btn").on("click",()=>{
-        $.ajax({
-            type:"get",
-            url:`${config.ip}:${config.port}/student/report/form`,
-            dataType:"json",
-            beforeSend: function(request) {
-                request.setRequestHeader("Authorization", sessionStorage.getItem("userinfo"));
-            },
-            success(data){
-                let msg = data.data
-                let url = `${config.ip}:${config.port}/`+msg
-                window.location.href = url
-                // console.log(url)
-
-            },
-            error(err){
-                // console.log(err)
-            }
-        })
+      },
+      error(err) {
+        // console.log(err)
+      }
     })
+  })
 
 
-    $('.return-btn').on("click",()=>{
-        window.location.href = "/student"
-    })
+  $('.return-btn').on("click", () => {
+    window.location.href = "/student"
+  })
 
 })
-    

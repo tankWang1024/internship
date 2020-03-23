@@ -35,14 +35,13 @@ $(()=>{
                 <div class="time"><span class="time-text">时间</span><span class="time-inner">${msg.codate?msg.codate:""}</span></div>
             </div>
             <div class="content">
-                <div class="content-name">实习成绩</div>
+                <div class="content-name">实习成绩：</div>
                 <div class="internship-grade">
                     <div class="line-one">
                         <div class="content">
                             <div class="content-name">实习单位指导教师成绩评定</div>
-                            <div class="inner-content">成绩:${msg.corpTeacherScore?msg.corpTeacherScore:"暂无评价"}</div>
                             <div class="inner-content">${msg.corpTeacherGrade?msg.corpTeacherGrade:"暂无内容"}</div>
-                            <div class="time"><span class="time-text">时间</span><span class="time-inner">${msg.ctgdate?msg.ctgdate:""}</span></div>
+                            <div class="time"><span class="time-text">时间</span><span class="time-inner">${msg.cGDate?msg.cGDate:""}</span></div>
                         </div>
                         <div class="content">
                             <div class="content-name">学院指导教师成绩评定</div>
@@ -60,7 +59,7 @@ $(()=>{
             <div class="content">
                 <div class="content-name">学院实习领导小组意见</div>
                 <div class="inner-content">${msg.collegePrincipalOpinion?msg.collegePrincipalOpinion:"暂无内容"}</div>
-                <div class="time"><span class="time-text">时间</span><span class="time-inner">${msg.cgdate?msg.cgdate:""}</span></div>
+                <div class="time"><span class="time-text">时间</span><span class="time-inner">${msg.cPODate?msg.cPODate:""}</span></div>
             </div>
         </div>`
             $(".window").html(template)
@@ -72,6 +71,10 @@ $(()=>{
 
 
     $(".download-btn").on("click",()=>{
+      layer.msg('服务器正在生成pdf页面，请耐心等待....', {
+        time: 99999
+      })
+      $(".download-btn")[0].disabled = 'disabled'
         $.ajax({
             type:"get",
             url:`${config.ip}:${config.port}/student/identify/form`,
