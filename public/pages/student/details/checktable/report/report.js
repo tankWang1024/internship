@@ -7,7 +7,7 @@ $(() => {
       request.setRequestHeader("Authorization", sessionStorage.getItem("userinfo"));
     },
     success: (data) => {
-      // console.log(data.data)
+      console.log(data)
       let msg = data.data
       let template = `<div class="msg-block">
             <div class="title">第一阶段报告册</div>

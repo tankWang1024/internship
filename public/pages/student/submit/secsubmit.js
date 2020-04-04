@@ -5,7 +5,6 @@ window.onload = ()=>{
     redirectTo(document.getElementsByClassName("list")[0].getElementsByTagName('li')[0],"/student/first")
     redirectTo(document.getElementsByClassName('item')[0],"/student");
     redirectTo(document.getElementsByClassName('item')[2],"/student-decision");
-    var gmtEnd = null;
     $.ajax({
             type:"get",
             url:`${config.ip}:${config.port}/student/reportForm`,
@@ -15,35 +14,18 @@ window.onload = ()=>{
             },
             success:(data)=>{
                 const msg = data.data
-                console.log(msg)
-                gmtEnd = new Date(msg.gmtEnd)
+                // console.log(msg)
                 if(msg.stage2GuideDate){
                     var firtime = msg.stage2GuideDate.split(' - ')[0]
                     var lasttime = msg.stage2GuideDate.split(' - ')[1]
                 }
-                
                 firtimeinput.value = firtime?firtime:""
                 lasttimeinput.value = lasttime?lasttime:""
-
-                var dateStart = null;
-                if(msg.stage2Date){
-                    dateStart= new Date(msg.stage2Date)
-                }else{//第一次填
-                    dateStart = new Date()
-                }
-                // console.log(dateStart);
-                let yearStart = dateStart.getFullYear()
-                let monthStart =('0'+(dateStart.getMonth()+1)).slice(-2)
-                let dayStart = ('0'+dateStart.getDate()).slice(-2)
-                starttime.value = yearStart+'-'+monthStart+'-'+dayStart
-
                 method.value = msg.stage2GuideWay
                 summary.value = msg.stage2Summary
 
                 $('.limit').each((index,item)=>{
-
                     $(item).find('.summary-num').html($(item).siblings().get(1).value.length)
-
                 })
             },
             error:(err)=>{
@@ -52,7 +34,6 @@ window.onload = ()=>{
     })
 
     $('#summary').on("input",()=>{
-        // console.log(111)
         $('.summary-num').html($('#summary').get(0).value.length)
         // $(this).find('.summary-num').html($(this).siblings().get(1).value.length)
     })
@@ -80,14 +61,7 @@ window.onload = ()=>{
                             // 为了防止学生重复点击，加载出来之前关闭按钮
                             $("#secsubmit").text("提交中,请稍后...");
                             $("#secsubmit").attr("disabled","true");
-                            if(!starttime.value){
-                                layer.msg("填写时间为必填项!")
-                                $("#secsubmit").removeAttr("disabled");
-                                $("#secsubmit").text("提交");
-                                return;
-                            }
                             let stage2_summary = summary.value
-                            let stage2Date   = starttime.value ;
                             let stage2GuideWay  = method.value ;
                             let stage2GuideDate = firtimeinput.value+" - "+lasttimeinput.value;
                             // console.log(summary.value.length)
@@ -110,8 +84,6 @@ window.onload = ()=>{
                                 url:`${config.ip}:${config.port}/student/report/stage2`,
                                 dataType:"json",
                                 data:{
-                                    gmtEnd:gmtEnd,
-                                    stage2Date :stage2Date ,
                                     stage2GuideDate:stage2GuideDate,
                                     stage2Summary:stage2_summary,
                                     stage2GuideWay:stage2GuideWay

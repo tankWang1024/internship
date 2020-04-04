@@ -79,7 +79,7 @@ $(() => {
                 <div class="text"><span>性别</span>${teacher.sex}</div>
                 <div class="text"><span>年龄</span>${teacher.age}</div>
                 <div class="text"><span>工号</span>${teacher.teacherNo}</div>
-                <div class="text">${teacher.college}</div>
+                <div class="text"><span>学校</span>${teacher.college}</div>
                 <div class="text"></div>`
                     $(".teacher-info").html(teacherTemplate)
                 } else {

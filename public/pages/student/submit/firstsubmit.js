@@ -5,9 +5,8 @@ window.onload = ()=>{
     redirectTo(document.getElementsByClassName("list")[0].getElementsByTagName('li')[1],"/student/twice")
     redirectTo(document.getElementsByClassName('item')[0],"/student");
     redirectTo(document.getElementsByClassName('item')[2],"/student-decision");
-    var gmtStart = null;
     $.ajax({
-        type:"get",
+            type:"get",
             url:`${config.ip}:${config.port}/student/reportForm`,
             dataType:"json",
             beforeSend: function(request) {
@@ -15,27 +14,13 @@ window.onload = ()=>{
             },
             success:(data)=>{
                 const msg = data.data
-                // console.log(msg)
-                gmtStart = new Date(msg.gmtStart)
+                // console.log(data)
                 if(msg.stage1GuideDate){
                     var firtime = msg.stage1GuideDate.split(' - ')[0]
                     var lasttime = msg.stage1GuideDate.split(' - ')[1]
                 }
-                
                 firtimeinput.value = firtime?firtime:""
                 lasttimeinput.value = lasttime?lasttime:""
-
-                var dateStart = null;
-                if(msg.stage1Date){
-                    dateStart= new Date(msg.stage1Date)
-                }else{//第一次填
-                    dateStart = new Date()
-                }
-                // console.log(dateStart);
-                let yearStart = dateStart.getFullYear()
-                let monthStart =('0'+(dateStart.getMonth()+1)).slice(-2)
-                let dayStart = ('0'+dateStart.getDate()).slice(-2)
-                starttime.value = yearStart+'-'+monthStart+'-'+dayStart
                 method.value = msg.stage1GuideWay
                 summary.value = msg.stage1Summary
 
@@ -75,17 +60,8 @@ window.onload = ()=>{
                             // 为了防止学生重复点击，加载出来之前关闭按钮
                             $("#firtsubmit").text("提交中,请稍后...");
                             $("#firtsubmit").attr("disabled","true");
-                            if(!starttime.value){
-                                layer.msg("填写时间为必填项!")
-                                $("#firtsubmit").removeAttr("disabled");
-                                $("#firtsubmit").text("提交");
-                                return;
-                            }
                             let stage1Summary = summary.value
-                            let stage1Date  = starttime.value ;
-                            // console.log(typeof stage1Date)
                             let stage1GuideWay  = method.value ;
-                            // console.log(gmtStart)
                             let stage1GuideDate = firtimeinput.value+" - "+lasttimeinput.value;
                             if(summary.value.length > 1050){
                                 layer.msg("字数超过限制,请更改后提交!");
@@ -106,8 +82,6 @@ window.onload = ()=>{
                                 url:`${config.ip}:${config.port}/student/report/stage1`,
                                 dataType:"json",
                                 data:{
-                                    gmtStart:gmtStart,
-                                    stage1Date:stage1Date,
                                     stage1Summary:stage1Summary,
                                     stage1GuideDate:stage1GuideDate,
                                     stage1GuideWay:stage1GuideWay
@@ -117,7 +91,7 @@ window.onload = ()=>{
                                 },
                                 success:(data)=>{
                                     if (data.status == 1) {
-                                        layer.msg("提交成功!" + data.message)
+                                        layer.msg("提交成功!")
                                         setTimeout(()=>{
                                             window.location.href = "/student"
                                         },1000)
